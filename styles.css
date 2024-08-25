@@ -1,0 +1,117 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.info1 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    }
+.logo {
+    background-color: hsl(30, 70%, 65%);
+    width: 100%;
+    overflow: hidden;
+    border-bottom: solid 0px black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: rgba(246,141,39,255);
+    width: 100%;
+    padding: 20px; 
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+}
+
+.cFooter {
+    background-color: #f1b67a;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; 
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+    
+}
+
+.rue, .mail {
+    color: #000000;
+    text-decoration: none;
+}
+
+.rue:hover, .mail:hover {
+    color:#1098a4; 
+    cursor:pointer;  
+}
+
+h3 {
+    display: block; 
+}
+
+.horaires {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    margin-right: 5%;
+    margin-left: 5%;
+
+}
+
+.textHor {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    font-size: 80%;
+    display: inline-block;
+
+    margin-left: 5%;
+}
+
+.contact {
+    
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5%;
+    margin-left: 5%;  
+
+    
+}
+
+.location {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5%;
+
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(246,141,39,255);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(246,141,30,255);
+    ;
+}
+
+.back-to-top:hover {
+    background-color: #e67e22;
+}
