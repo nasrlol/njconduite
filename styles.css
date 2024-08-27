@@ -22,11 +22,11 @@ html, body {
 }
 
 .logo-container {
-    margin-left: 10px; /* Slight adjustment to move the logo a bit to the right */
+    margin-left: 10px;
 }
 
 .button-container {
-    margin-right: 10px; /* Slight adjustment to move the buttons a bit to the left */
+    margin-right: 10px; 
 }
 
 .info1 {
@@ -50,8 +50,8 @@ html, body {
 
     border-radius: 5%;
 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), /* larger shadow */
-    0 6px 6px rgba(0, 0, 0, 0.10); /* smaller shadow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 
+    0 6px 6px rgba(0, 0, 0, 0.10); 
 }
 
 .info2 {
@@ -76,8 +76,8 @@ html, body {
 
     border-radius: 5%;
 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), /* larger shadow */
-    0 6px 6px rgba(0, 0, 0, 0.10); /* smaller shadow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15),
+    0 6px 6px rgba(0, 0, 0, 0.10); 
 }
 
 .footer {
