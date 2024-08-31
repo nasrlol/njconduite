@@ -18,41 +18,45 @@ a, a:hover, a:focus, a:active {
     background-color: hsl(30, 70%, 65%);
     padding: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-
 
 .logo-container {
     margin-left: 10px;
 }
 
-.button-container {
-    margin-right: 10px;
-    gap: 10px;
+.rightsidebuttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 /* Button styling */
 .banner-button {
-    margin-left: px; 
     padding: 12px 16px;
-    background-color: rgba(246,141,39,255);
+    background-color: rgba(246, 141, 39, 1);
     color: white;
     cursor: pointer;
     border: none;
-    border-radius: 8%;
+    border-radius: 8px;
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .banner-button:hover {
     background-color: #e67e22;
 }
 
+.banner-button a {
+    color: white;
+}
+
 /* Dropdown menu styling */
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropdown-menu {
@@ -60,7 +64,7 @@ a, a:hover, a:focus, a:active {
     position: absolute;
     background-color: #eb870d;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
@@ -70,9 +74,7 @@ a, a:hover, a:focus, a:active {
 .dropdown-menu a {
     color: rgb(255, 255, 255);
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
-    
 }
 
 .dropdown-menu a:hover {
@@ -81,59 +83,58 @@ a, a:hover, a:focus, a:active {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-
 }
 
 /* Info boxes styling */
 .info-box {
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     text-align: center;
     width: 30%;
-    margin-top: 3%;
-    background-color: #ffff;
-    border-radius: 5%;
+    margin: 3% 10%;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10);
 }
 
 .info-box.left {
     float: left;
-    margin-left: 10%;
 }
 
 .info-box.right {
     float: right;
-    margin-right: 10%;
-    
 }
 
 /* Learn More button styling */
 .learn-more {
-    display: inline-block;
-    margin-left: 45%;
+    display: flex;
+    justify-content: center;
     margin-bottom: 3%;
-    padding: 10px 20px;
-    background-color: rgba(246,141,39,255);
+    padding: 10px 15px;
+    background-color: rgba(246, 141, 39, 1);
     color: white;
     border-radius: 5px;
     cursor: pointer;
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.learn-more a {
-    color: white;
-}
 
 .learn-more:hover {
     background-color: #e67e22;
+    
 }
 
 /* Footer styling */
 .footer {
-    background-color: rgba(246,141,39,255);
+    background-color: rgba(246, 141, 39, 1);
     width: 100%;
     padding: 20px;
     font-family: "Noto Sans", sans-serif;
@@ -160,15 +161,6 @@ a, a:hover, a:focus, a:active {
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
     box-sizing: border-box;
-}
-
-.rue, .mail {
-    color: #000000;
-}
-
-.rue:hover, .mail:hover {
-    color: #1098a4;
-    cursor: pointer;
 }
 
 /* Small text for opening hours */
