@@ -5,4 +5,3 @@ function getscreenres(screenres) {
 }
 getscreenres()
 
-if getscreenres() 
