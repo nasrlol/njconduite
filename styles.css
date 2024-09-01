@@ -23,6 +23,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .logo-container {
+    display: flex;
     margin-left: 10px;
 }
 
@@ -89,23 +90,22 @@ a, a:hover, a:focus, a:active {
 .info-box {
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
+    
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    width: 30%;
-    margin: 3% 10%;
+    width: 80%;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10);
 }
 
-.info-box.left {
-    float: left;
-}
 
-.info-box.right {
-    float: right;
-}
 
 /* Learn More button styling */
 .learn-more {
