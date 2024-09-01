@@ -161,6 +161,7 @@ a, a:hover, a:focus, a:active {
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
     box-sizing: border-box;
+    font-size: smaller;
 }
 
 /* Small text for opening hours */
