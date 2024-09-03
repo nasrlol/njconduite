@@ -12,14 +12,19 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
+a:hover{
 
+    color: rgb(36, 26, 2);
+}
 /* Banner styling */
 .banner {
-    background-color: hsl(30, 70%, 65%);
+    background-color: rgb(36, 35, 35);
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 0% 0% 2% 2%;
+
 }
 
 .logo-container {
@@ -40,7 +45,7 @@ a, a:hover, a:focus, a:active {
     color: white;
     cursor: pointer;
     border: none;
-    border-radius: 8px;
+    border-radius: 10%;
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -133,13 +138,16 @@ a, a:hover, a:focus, a:active {
 
 /* Footer styling */
 .footer {
-    background-color: rgba(246, 141, 39, 1);
+    background-color: rgb(36, 35, 35);
     width: 100%;
     padding: 20px;
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
     box-sizing: border-box;
     text-align: center;
+    border-radius: 4% 4% 0% 0%;
+    
+
 }
 
 .footer h3 {
@@ -149,13 +157,14 @@ a, a:hover, a:focus, a:active {
 .footer .location, 
 .footer .contact, 
 .footer .opening-hours {
+    color: #ffffff;
     display: inline-block;
     vertical-align: top;
     margin: 0 5%;
 }
 
 .copyright-footer {
-    background-color: #f1b67a;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
     padding: 10px 0;
