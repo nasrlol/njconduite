@@ -13,11 +13,6 @@ function getDeviceType() {
 
     const currentURL = window.location.href;
 
-    if (DEVICE_TYPE === 'Mobile' && !currentURL.includes("mobileindex.html")) {
-        window.location.href = "mobileindex.html?redirected=true";
-    } else if (DEVICE_TYPE !== 'Mobile' && !currentURL.includes("index.html")) {
-        window.location.href = "index.html?redirected=true";
-    }
 }
 
 getDeviceType();
