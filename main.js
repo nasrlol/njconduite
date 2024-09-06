@@ -1,5 +1,5 @@
 function getDeviceType() {
-    
+
     const USER_AGENT = navigator.userAgent.toLowerCase();
 
     let DEVICE_TYPE = '';
@@ -22,3 +22,8 @@ function getDeviceType() {
 }
 
 getDeviceType();
+
+document.querySelector('.dropdown').addEventListener('click', function() {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});

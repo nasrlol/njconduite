@@ -68,7 +68,7 @@ a:hover {
 
 /* Button styling within the banner */
 .banner-button {
-    display: inline-block;
+    display: inline-block !important;
     padding: 12px 16px !important;
     background-color: rgba(246, 141, 39, 1); /* Vibrant orange button */
     color: white;
@@ -107,9 +107,9 @@ a:hover {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #eb870d; /* Muted orange background */
+    background-color: #eb870d;
     min-width: 120px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
@@ -129,10 +129,6 @@ a:hover {
     background-color: #ff6f00; /* Lighter orange for hover */
 }
 
-/* Show dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
 
 /* Info Box for main content area */
 .info-box {
@@ -147,6 +143,7 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10); /* Subtle shadow */
 }
+
 .info-box:hover {
     
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.10); /* Subtle shadow */
@@ -154,6 +151,28 @@ a:hover {
 
 }
 
+/* Info box container */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 3% auto;
+    gap: 20px;
+}
+/* Info boxes */
+.info-box-permis {
+    flex: 1 1 calc(45% - 20px); /* Ensure boxes take up two per row */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.5s;
+}
+
+.info-box-permis:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.10);
+}
 
 /* Footer styling */
 .footer {
@@ -201,14 +220,16 @@ a:hover {
     font-size: 80%;
 }
 
-/* Media Query for responsiveness on smaller screens */
+
+/* Media Queries */
 @media (max-width: 768px) {
     .banner {
         flex-direction: column;
         align-items: center;
     }
 
-    .left-buttons, .right-buttons {
-        margin-bottom: 10px;
+    .info-box-permis {
+        flex: 1 1 100%;
     }
+    
 }
