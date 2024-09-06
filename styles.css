@@ -69,10 +69,9 @@ a:hover {
 /* Button styling within the banner */
 .banner-button {
     display: inline-block;
-    padding: 12px 16px;
+    padding: 12px 16px !important;
     background-color: rgba(246, 141, 39, 1); /* Vibrant orange button */
     color: white;
-    border-radius: 12%;
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
@@ -143,35 +142,12 @@ a:hover {
     margin: 3% auto;
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
     background-color: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10); /* Subtle shadow */
 }
 
-/* Learn More button styling */
-.learn-more {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3%;
-    padding: 10px 15px;
-    background-color: rgba(246, 141, 39, 1); /* Vibrant orange button */
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 600;
-    text-align: center;
-    width: fit-content;
-    transition: background-color 0.3s ease;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Darken Learn More button on hover */
-.learn-more:hover {
-    background-color: #e67e22; /* Darker orange on hover */
-}
 
 /* Footer styling */
 .footer {
