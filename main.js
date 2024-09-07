@@ -1,29 +1,38 @@
 function getDeviceType() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    let deviceType = '';
 
-    const USER_AGENT = navigator.userAgent.toLowerCase();
-
-    let DEVICE_TYPE = '';
-
-    if (USER_AGENT.indexOf('mobile') !== -1) {
-        DEVICE_TYPE = 'Mobile';
-    } else if (USER_AGENT.indexOf('tablet') !== -1) {
-        DEVICE_TYPE = 'Tablet';
+    if (userAgent.includes('mobile')) {
+        deviceType = 'Mobile';
+    } else if (userAgent.includes('tablet')) {
+        deviceType = 'Tablet';
     } else {
-        DEVICE_TYPE = 'Desktop';
+        deviceType = 'Desktop';
     }
 
     const currentURL = window.location.href;
 
-    if (DEVICE_TYPE === 'Mobile' && !currentURL.includes("mobileindex.html")) {
-        window.location.href = "mobileindex.html?redirected=true";
-    } else if (DEVICE_TYPE !== 'Mobile' && !currentURL.includes("index.html")) {
-        window.location.href = "index.html?redirected=true";
+    if (deviceType === 'Mobile' && !currentURL.includes('mobileindex.html')) {
+        window.location.href = 'mobileindex.html?redirected=true';
+    } else if (deviceType !== 'Mobile' && !currentURL.includes('index.html')) {
+        window.location.href = 'index.html?redirected=true';
     }
+
+    return deviceType; // Added return to use the deviceType later if needed
 }
 
-getDeviceType();
+const deviceType = getDeviceType();
 
-document.querySelector('.dropdown').addEventListener('click', function() {
+// Dropdown toggle functionality
+document.querySelector('.dropdown').addEventListener('click', function () {
     const dropdownMenu = document.querySelector('.dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
+
+// Screen size redirection logic
+const height = window.innerHeight;
+const width = window.innerWidth;
+
+if (width < 600 && deviceType === 'Desktop') {
+    window.location.href = 'mobileindex.html';
+}
