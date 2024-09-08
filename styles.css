@@ -85,11 +85,6 @@ a:hover {
     background-color: #e67e22; /* Darker orange on hover */
 }
 
-/* Ensure button text remains white */
-.banner-button a {
-    color: white;
-}
-
 /* Dropdown Menu */
 .dropdown {
     position: relative;
@@ -129,7 +124,6 @@ a:hover {
     background-color: #ff6f00; /* Lighter orange for hover */
 }
 
-
 /* Info Box for main content area */
 .info-box {
     font-family: "Noto Sans", sans-serif;
@@ -145,10 +139,8 @@ a:hover {
 }
 
 .info-box:hover {
-    
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.10); /* Subtle shadow */
     transition: box-shadow 0.5s;
-
 }
 
 /* Info box container */
@@ -160,6 +152,7 @@ a:hover {
     margin: 3% auto;
     gap: 20px;
 }
+
 /* Info boxes */
 .info-box-permis {
     flex: 1 1 calc(45% - 20px); /* Ensure boxes take up two per row */
@@ -220,6 +213,23 @@ a:hover {
     font-size: 80%;
 }
 
+/* CTA Button styling */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: rgba(246, 141, 39, 1);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -231,5 +241,12 @@ a:hover {
     .info-box-permis {
         flex: 1 1 100%;
     }
-    
+
+    .footer .location, 
+    .footer .contact, 
+    .footer .opening-hours {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
 }

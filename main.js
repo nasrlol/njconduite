@@ -27,12 +27,6 @@ const deviceType = getDeviceType();
 document.querySelector('.dropdown').addEventListener('click', function () {
     const dropdownMenu = document.querySelector('.dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+
 });
 
-// Screen size redirection logic
-const height = window.innerHeight;
-const width = window.innerWidth;
-
-if (width < 600 && deviceType === 'Desktop') {
-    window.location.href = 'mobileindex.html';
-}
