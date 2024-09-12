@@ -101,7 +101,7 @@ a:hover {
 /* Hidden dropdown content */
 .dropdown-menu {
     display: none;
-    position: relative;
+    position: absolute;
     background-color: #eb870d;
     min-width: 120px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
