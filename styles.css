@@ -208,6 +208,17 @@ a:hover {
     margin-bottom: 0 !important;
 }
 
+.cHeader {
+
+    background-color: rgb(246, 244, 248); /* Dark gray background for banner */
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    color: #050404;
+    padding: 1px;
+    
+}
+
 /* Footer opening hours font size adjustment */
 .opening-hours p {
     font-size: 80%;
