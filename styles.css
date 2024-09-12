@@ -187,7 +187,7 @@ a:hover {
 /* Footer sections for location, contact, opening hours */
 .footer .location, 
 .footer .contact, 
-.footer .opening-hours {
+.footer .opening-hours .cHeader {
     color: #ffffff;
     display: inline-block;
     vertical-align: top;
@@ -210,11 +210,11 @@ a:hover {
 
 .cHeader {
 
-    background-color: rgb(246, 244, 248); /* Dark gray background for banner */
+    background-color: rgb(36, 35, 35); /* Dark gray background */
     text-align: center;
     font-family: "Noto Sans", sans-serif;
     font-weight: 700;
-    color: #050404;
+    color: #cfc1c1;
     padding: 1px;
     
 }
@@ -255,7 +255,7 @@ a:hover {
 
     .footer .location, 
     .footer .contact, 
-    .footer .opening-hours {
+    .footer .opening-hours .cHeader{
         display: block;
         text-align: center;
         margin: 20px 0;
