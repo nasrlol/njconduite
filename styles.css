@@ -44,13 +44,10 @@ a:hover {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+
 }
 
-/* Flexbox container for buttons on the left and right of the banner */
-.left-buttons, .right-buttons {
-    display: flex;
-    gap: 10px; /* Spacing between buttons */
-}
+
 
 /* Logo container for aligning and setting logo size */
 .logo-container {
@@ -71,7 +68,6 @@ a:hover {
     display: inline-block !important;
     padding: 12px 16px !important;
     background-color: rgba(246, 141, 39, 1); /* Vibrant orange button */
-    color: white;
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
@@ -96,6 +92,7 @@ a:hover {
     margin-right: 10px;
     display: flex;
     align-items: center;
+
 }
 
 /* Hidden dropdown content */
@@ -110,6 +107,8 @@ a:hover {
     font-weight: 600;
     font-size: 14px;
     padding: 8px 10px;
+    right: 0;
+
 }
 
 /* Dropdown links styling */
@@ -117,6 +116,7 @@ a:hover {
     color: white;
     padding: 8px 10px;
     display: block;
+
 }
 
 /* Dropdown link hover effect */
@@ -225,23 +225,6 @@ a:hover {
     font-size: 80%;
 }
 
-/* CTA Button styling */
-.cta-button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: rgba(246, 141, 39, 1);
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-.cta-button:hover {
-    background-color: #e67e22;
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
