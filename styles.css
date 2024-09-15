@@ -48,7 +48,6 @@ a:hover {
 }
 
 
-
 /* Logo container for aligning and setting logo size */
 .logo-container {
     display: flex;
@@ -92,7 +91,7 @@ a:hover {
     margin-right: 10px;
     display: flex;
     align-items: center;
-
+    border: none;
 }
 
 /* Hidden dropdown content */
