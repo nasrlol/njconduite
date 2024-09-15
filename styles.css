@@ -30,27 +30,15 @@ a:hover {
 /* Banner styling */
 .banner {
     background-color: rgb(36, 35, 35); /* Dark gray background for banner */
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Center the banner items */
-.banner-items {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-
 /* Logo container for aligning and setting logo size */
 .logo-container {
     display: flex;
+    padding: 10px;
     justify-content: center;
     align-items: center;
     width: 200px; /* Fixed width for the logo container */
@@ -60,6 +48,15 @@ a:hover {
 .logo {
     max-width: 100%; /* Ensure logo fits within its container */
     height: auto;
+}
+
+/* Container for banner buttons */
+/* Container for banner buttons */
+.rightsidebuttons {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    padding: 10px;  /* Add padding to the right side of the banner */
+    gap: 10px; /* Add space between the buttons */
 }
 
 /* Button styling within the banner */
@@ -73,6 +70,8 @@ a:hover {
     text-align: center;
     transition: background-color 0.3s ease;
     text-decoration: none;
+    border-radius: 10%;
+    
 }
 
 /* Darken button on hover */
@@ -88,7 +87,7 @@ a:hover {
 /* Dropdown button style inside banner */
 .dropdown .banner-button {
     padding: 10px;
-    margin-right: 10px;
+    margin-right: 10%;
     display: flex;
     align-items: center;
     border: none;
@@ -107,6 +106,8 @@ a:hover {
     font-size: 14px;
     padding: 8px 10px;
     right: 0;
+    border-radius: 2%;
+
 
 }
 
@@ -121,6 +122,20 @@ a:hover {
 /* Dropdown link hover effect */
 .dropdown-menu a:hover {
     background-color: #ff6f00; /* Lighter orange for hover */
+}
+
+.banner-button-call {
+    display: inline-block !important;
+    padding: 12px 16px !important;
+    background-color: rgba(246, 141, 39, 1); /* Vibrant orange button */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    border-radius: 10%;
+    border: none;
 }
 
 /* Info Box for main content area */
