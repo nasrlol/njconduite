@@ -6,3 +6,9 @@ document.querySelector('.dropdown').addEventListener('click', function () {
 
 });
 
+document.querySelector('.banner-button-call').addEventListener('click', function () {
+
+    const buttonSlide = document.querySelector('.banner-button-call-slide');
+    buttonSlide.style.display = buttonSlide.style.opacity === 1 ? 0 : 1; 
+
+});
