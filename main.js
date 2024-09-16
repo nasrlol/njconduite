@@ -6,6 +6,8 @@ document.querySelector('.dropdown').addEventListener('click', function () {
 
 });
 
+// Commenting out the selected code
+/*
 document.querySelector('.banner-button-call').addEventListener('click', function () {
     const buttonSlide = document.querySelector('.banner-button-call-slide');
     
@@ -24,6 +26,5 @@ document.querySelector('.banner-button-call').addEventListener('click', function
         
         buttonSlide.style.width = '0'
     }
-
-
 });
+*/
