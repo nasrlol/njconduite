@@ -10,24 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const callButtonContainer = document.querySelector('.call-button-container');
     const callButton = document.querySelector('.banner-button-call');
 
-    // Toggle the call slide on click of the container or call button
-    callButtonContainer.addEventListener('click', function() {
+    // Toggle the call slide when clicking the container (which includes the call button)
+    callButton.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent event from bubbling up
         callButtonSlide.classList.toggle('expanded');
     });
 
-    // Close the slide if clicked outside of the call button or slide
+    // Close the slide if clicked outside the call button or the slide itself
     document.addEventListener('click', function(event) {
         if (!callButtonContainer.contains(event.target) &&
             !callButtonSlide.contains(event.target) &&
-            !callButton.contains(event.target) &&
             callButtonSlide.classList.contains('expanded')) {
             callButtonSlide.classList.remove('expanded');
         }
-    });
-
-    // Handle click on the call button itself
-    callButton.addEventListener('click', function(event) {
-        event.stopPropagation(); // Stop event from bubbling up
-        callButtonSlide.classList.toggle('expanded');
     });
 });
