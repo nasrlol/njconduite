@@ -173,12 +173,19 @@ a:hover {
     border-radius: 0 5px 5px 0;
 }
 
+
+.expaneded {
+    opacity: 1;
+    width: 150px;
+    font-size: 14px;
+}
+
 /* Show the call-slide when the container is hovered */
-.call-button-container:hover .banner-button-call-slide {
+.call-button-container:hover .banner-button-call-slide,
+.call-button-container .banner-button-call-slide.expanded {
     opacity: 1;
     width: 150px; /* Expanded width */
     font-size: 14px;
-    
 }
 
 
@@ -297,3 +304,4 @@ a:hover {
         text-align: center;
         margin: 20px 0;
     }
+}
