@@ -13,13 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         callButtonSlide.classList.toggle('expanded');
     });
 
-    // Optional: Close the slide when clicking outside
+    // Close the slide when clicking outside or on the banner button call button
     document.addEventListener('click', function(event) {
-        if (!callButtonContainer.contains(event.target) && callButtonSlide.classList.contains('expanded')) {
-            callButtonSlide.classList.remove('expanded');
-        }
-        else if (callButtonContainer.contains(event.target) && callButtonSlide.classList.contains('expanded')) {
-            callButtonSlide.classList.remove('expanded');
+        if (!callButtonContainer.contains(event.target) && !document.querySelector('.dropdown .banner-button').contains(event.target) && callButtonSlide.classList.contains('expanded')) {
+                callButtonSlide.classList.remove('expanded');
         }
     });
 });

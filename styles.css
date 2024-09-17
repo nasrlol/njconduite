@@ -33,7 +33,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px; /* Fixed height for the banner */
+    height: 120px; /* Fixed height for the banner */
     box-sizing: border-box; /* Include padding in the height */
     position: relative; /* Make sure it stays in place */
 }
@@ -45,7 +45,8 @@ a:hover {
     padding: 10px;
     justify-content: center;
     align-items: center;
-    width: 200px; /* Fixed width for the logo container */
+    width: 150px; /* Fixed width for the logo container */
+    size: small;
 }
 
 /* Logo styling */
