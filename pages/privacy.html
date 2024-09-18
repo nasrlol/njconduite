@@ -18,23 +18,41 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-
-    <!-- Banner Section -->
-    <div class="banner">
+    <header class="banner">
         <div class="logo-container">
-            <a href="index.html">
-                <img src="images/njconduite.png" alt="NJ CONDUITE">
+            <a href="../index.html">
+                <img src="../images/njconduitemini.png" alt="NJ CONDUITE" class="logo">
             </a>
         </div>
-            <div class="button-container">
-                <!-- Desktop buttons styled like the learn-more button -->
-                <a href="pages/coderoute.html" class="banner-button">LE CODE</a>
-                <a href="pages/permis.html" class="banner-button">PERMIS</a>
-                <a href="pages/financement.html" class="banner-button">FINANCEMENT</a>
-                <a href="pages/contact.html" class="banner-button">CONTACT</a>
+
+        <!-- Combine both buttons into the same container -->
+        <nav class="rightsidebuttons">
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <button class="banner-button">
+                    <img src="../images/menu.svg" alt="menu">
+                </button>
+                <div class="dropdown-menu">
+                    <a href="codederoute.html">LE CODE</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="permis.html">PERMIS</a>
+                    <a href="financement.html">FINANCEMENT</a>
+                </div>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Phone button -->
+            <div class="call-button-container">
+                <button class="banner-button-call">
+                    <img src="../images/phone.svg" alt="phone">
+                </button>
+
+                <button class="banner-button-call-slide">
+                    <a href="tel:0442854015">0442854015</a>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <!-- Info Section -->
     <div class="info-box">
