@@ -164,11 +164,12 @@ a, a:hover, a:focus, a:active {
     overflow: hidden;  /* Hide content when collapsed */
     margin-left: -2px; /* To remove gap */
     margin-right: 10px;
-    transition: opacity 0.5s ease, width 0.5s ease;
+    transition: opacity 0.5s ease, width 0.7s ease;
     border: 1px solid #ffffff;
     /* remove the  border to the slide button */
     border-left: none;
     border-radius: 0 5px 5px 0;
+    height: 50px;
 }
 
 /* Fix for the weird text behavior */
@@ -177,6 +178,7 @@ a, a:hover, a:focus, a:active {
     color: rgba(246, 141, 39, 1);
     text-decoration: none;
     font-weight: 600;
+    line-height: 1;
 }
 
 /* Show the text only when fully expanded */
