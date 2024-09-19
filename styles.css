@@ -23,6 +23,19 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
+.theader {
+
+    background-color: #ffffff; /* White background */
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-size: smaller;
+    color: #000000; /* Black text for contrast */
+    margin-top: 0 !important;
+}
 /* Change link color on hover */
 .footer a:hover {
     color: rgb(228, 226, 221); /* Muted hover color for links */
@@ -342,7 +355,7 @@ a, a:hover, a:focus, a:active {
 /* Footer sections for location, contact, opening hours */
 .footer .location, 
 .footer .contact, 
-.footer .opening-hours .cHeader {
+.footer .opening-hours .theader {
     color: #ffffff;
     display: inline-block;
     vertical-align: top;
@@ -398,7 +411,7 @@ a, a:hover, a:focus, a:active {
 
     .footer .location, 
     .footer .contact, 
-    .footer .opening-hours .cHeader {
+    .footer .opening-hours .theader {
         display: block;
         text-align: center;
         margin: 20px 0;
