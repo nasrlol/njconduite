@@ -34,10 +34,10 @@ a, a:hover, a:focus, a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 140px; /* Fixed height for the banner */
+    height: 130px; /* Fixed height for the banner */
     box-sizing: border-box; /* Include padding in the height */
-    position: relative; /* Make sure it stays in place */
-}
+    position: sticky;
+    top: 0;}
 
 
 /* Logo container for aligning and setting logo size */
@@ -60,6 +60,7 @@ a, a:hover, a:focus, a:active {
     display: flex;
     align-items: center; /* Vertically align items */
     gap: 10px; /* Add space between the buttons */
+
 }
 
 /* Container for the call buttons */
@@ -237,10 +238,12 @@ a, a:hover, a:focus, a:active {
     margin: 3% auto;
     padding: 20px;
     box-sizing: border-box;
-    text-align: left;
+    text-align: center;
     background-color: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10); /* Subtle shadow */
+    
+
 }
 
 .info-box:hover {
@@ -248,7 +251,9 @@ a, a:hover, a:focus, a:active {
     transition: box-shadow 0.5s;
 }
 
-
+.services{
+    text-align: left;
+}
 
 .submit {
 
@@ -292,6 +297,28 @@ a, a:hover, a:focus, a:active {
 
 .info-box-permis:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.10);
+}
+
+
+
+.savoirplus {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 16px;
+    background-color: rgba(246, 141, 39, 1);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.savoirplus:hover {
+    background-color: #e67e22; /* Darker orange on hover */
 }
 
 /* Footer styling */
@@ -347,6 +374,7 @@ a, a:hover, a:focus, a:active {
         flex-direction: column;
         align-items: center;
         height: auto;
+        position: relative;
         
     }
 
