@@ -382,7 +382,7 @@ a, a:hover, a:focus, a:active {
 }
 
 /* Media Queries */
-@media (max-width: 430px) {
+@media (max-width: 300px) {
     .banner {
         flex-direction: column;
         align-items: center;
