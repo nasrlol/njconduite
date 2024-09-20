@@ -268,6 +268,19 @@ a, a:hover, a:focus, a:active {
     text-align: left;
 }
 
+.form {
+    display: flex;
+    flex-direction: rows;
+    align-items: center;
+    gap: 10px;
+    width: 60%; /* Increase the width of the form */
+    height: 100%;
+    margin: 3%; 
+    
+
+}
+
+
 .submit {
 
     display: inline-block;
@@ -278,10 +291,7 @@ a, a:hover, a:focus, a:active {
     font-size: 14px;
     text-align: center;
     border: none;
-    border-radius: 10%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -321,10 +331,9 @@ a, a:hover, a:focus, a:active {
     background-color: rgba(246, 141, 39, 1);
     color: #fff;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
     border: none;
-    border-radius: 10%;
     cursor: pointer;
     max-width: fit-content;
     margin-inline: auto;
