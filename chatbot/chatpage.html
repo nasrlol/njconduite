@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chat Page</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Add CSS styles for the chat form and messages */
+        .chat-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chat-message {
+            background-color: #f1f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .user-message {
+            background-color: #dcf8c6;
+        }
+
+        .bot-message {
+            background-color: #fff;
+        }
+
+        .chat-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-top: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header class="banner">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../images/njconduitemini.png" alt="NJ CONDUITE" class="logo">
+            </a>
+        </div>
+
+        <!-- Combine both buttons into the same container -->
+        <nav class="rightsidebuttons">
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <button class="banner-button">
+                    <img src="../images/menu.svg" alt="menu">
+                </button>
+                <div class="dropdown-menu">
+                    <a href="../pages/contact.html">CONTACT</a>
+                    <a href="../pages/coderoute.html">LE CODE</a>
+                    <a href="../pages/permis.html">PERMIS</a>
+                    <a href="../pages/financement.html">FINANCEMENT</a>
+                    <a href="../pages/privacy.html">CONFIDENTIALITÉ</a>
+                </div>
+            </div>
+
+            <button class="banner-button-chat">
+                <img src="../images/chat.svg" alt="parlez-nous">
+                <a href="../chatbot/login.html"></a>
+            </button>
+
+            <!-- Phone button -->
+            <div class="call-button-container">
+                <button class="banner-button-call">
+                    <img src="../images/phone.svg" alt="appelez-nous">
+                </button>
+
+                <button class="banner-button-call-slide">
+                    <a href="tel:0442854015">0442854015</a>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <section class="info-box">
+        <div class="chat-container">
+            <div class="chat-message bot-message">
+                <p>Bonjour! Comment puis-je vous aider?</p>
+            </div>
+            <div class="chat-message user-message">
+                <p>Salut!</p>
+            </div>
+            <!-- Add more chat messages here -->
+
+            <form id="chat-form">
+                <input type="text" id="message-input" class="chat-input" placeholder="Tapez votre message ici...">
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        <script src="main.js" defer></script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <!-- Location Info -->
+            <div class="location">
+                <h3>Emplacement</h3>
+                <a href="https://maps.app.goo.gl/dfFSUVzosSf1zXka8" target="_blank">
+                    <p>130 Berre-L'Étang, 35 Av. de la libération</p>
+                </a>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact">
+                <h3>Contact</h3>
+                <a href="mailto:njconduite@gmail.com">
+                    <p>njconduite@gmail.com</p>
+                </a>
+                <p>04 42 85 40 15</p>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="opening-hours">
+                <h3>Horaires</h3>
+                <p>Lundi: fermé</p>
+                <p>Mardi - Vendredi: 14h-19h</p>
+                <p>Samedi: 10h-12h</p>
+                <p>Dimanche: fermé</p>
+            </div>
+        </div>
+        <div class="copyright-footer">
+            © 2024 NJ Conduite - Auto-école Berre-l'Étang |
+            <a href="https://github.com/nasrlol">nsrddyn</a> |
+            <a href="../pages/privacy.html">Politique de confidentialité</a>
+        </div>
+    </footer>
 </body>
+
 </html>

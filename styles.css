@@ -23,22 +23,99 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-.theader {
-    background-color: #ffffff;
-    width: 100%;
+/* Common button styles */
+.banner-button, .banner-button-call, .banner-button-chat, .savoirplus, .lespermis {
+    display: inline-block;
+    padding: 12px 16px;
+    background-color: rgba(246, 141, 39, 1);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
     text-align: center;
-    padding: 2px;
+    transition: background-color 0.3s ease;
+    border: none;
+    color: #fff;
+}
+
+.banner-button:hover, .banner-button-call:hover, .banner-button-chat:hover, .savoirplus:hover, .lespermis:hover {
+    background-color: #e67e22;
+}
+
+/* Specific button styles */
+.banner-button {
+    border-radius: 10%;
+}
+
+.banner-button-call, .banner-button-chat {
+    border-radius: 10%;
+}
+
+.banner-button-call {
+    margin-left: -10px;
+}
+
+.banner-button-chat {
+    margin-right: 10px;
+}
+
+.savoirplus {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 10%;
+}
+
+.lespermis {
+    margin-top: 20px;
+    padding: 6px 16px;
+    border-radius: 5px;
+}
+
+/* Theader styles */
+.theader, .footer, .copyright-footer {
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
     box-sizing: border-box;
+    text-align: center;
+}
+
+.theader {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 2px;
     font-size: smaller;
     color: #000000;
     margin-top: 0;
 }
 
-/* Change link color on hover */
+/* Footer styles */
+.footer {
+    background-color: rgb(36, 35, 35);
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer .location, .footer .contact, .footer .opening-hours .theader {
+    color: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5%;
+}
+
 .footer a:hover {
     color: rgb(228, 226, 221);
+}
+
+.copyright-footer {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px 0;
+    font-size: smaller;
+    color: #000000;
 }
 
 /* Banner styling */
@@ -62,7 +139,6 @@ a, a:hover, a:focus, a:active {
     width: 150px;
 }
 
-/* Logo styling */
 .logo {
     max-width: 100%;
     height: auto;
@@ -85,27 +161,11 @@ a, a:hover, a:focus, a:active {
     position: relative;
 }
 
-/* Button styling within the banner */
-.banner-button {
-    display: inline-block;
-    padding: 12px 16px;
-    background-color: rgba(246, 141, 39, 1);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 10%;
-    border: none;}
-
-/* Darken button on hover */
-.banner-button:hover {
-    background-color: #e67e22;
-}
-
 /* Dropdown Menu */
 .dropdown {
     position: relative;
 }
 
-/* Dropdown button style inside banner */
 .dropdown .dropdown-button {
     padding: 10px;
     display: flex;
@@ -113,7 +173,6 @@ a, a:hover, a:focus, a:active {
     border: none;
 }
 
-/* Hidden dropdown content */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -130,42 +189,14 @@ a, a:hover, a:focus, a:active {
     margin-top: 2px;
 }
 
-/* Dropdown links styling */
 .dropdown-menu a {
     color: white;
     padding: 10px 10px;
     display: block;
 }
 
-/* Dropdown link hover effect */
 .dropdown-menu a:hover {
     background-color: #ff6f00;
-}
-
-/* Call button styling */
-
-.banner-button-call,
-.banner-button-chat {
-    display: inline-block;
-    padding: 12px 16px;
-    background-color: rgba(246, 141, 39, 1);
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    border-radius: 10%;
-    border: none;
-}
-
-/* Rounded corners on hover */
-.banner-button-call:hover,
-.banner-button-chat:hover {
-    background-color: #e67e22;
-}
-
-.banner-button-call {
-    margin-left: -10px;
 }
 
 /* Call button slide styling */
@@ -189,7 +220,6 @@ a, a:hover, a:focus, a:active {
     height: 50px;
 }
 
-/* Fix for the weird text behavior */
 .banner-button-call-slide a {
     visibility: hidden;
     color: rgba(246, 141, 39, 1);
@@ -198,7 +228,6 @@ a, a:hover, a:focus, a:active {
     line-height: 1;
 }
 
-/* Show the text only when fully expanded */
 .call-button-container:hover .banner-button-call-slide a,
 .call-button-container .banner-button-call-slide.expanded a {
     visibility: visible;
@@ -210,7 +239,6 @@ a, a:hover, a:focus, a:active {
     font-size: 14px;
 }
 
-/* Show the call-slide when the container is hovered */
 .call-button-container:hover .banner-button-call-slide,
 .call-button-container .banner-button-call-slide.expanded {
     opacity: 1;
@@ -218,33 +246,48 @@ a, a:hover, a:focus, a:active {
     font-size: 14px;
 }
 
-/* Styling for the anchor link inside the slide button */
-.banner-button-call-slide a {
-    color: rgba(246, 141, 39, 1);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.banner-button-chat {
-    margin-right: 10px;
-}
-
 /* Info Box for main content area */
-.info-box {
-    font-weight:100;
-    max-width: 80%;
-    margin: 3% auto;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
+.info-box, .info-box-permis, .contact-info, .appo-box {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-.info-box:hover {
+.info-box {
+    font-weight: 100;
+    max-width: 80%;
+    margin: 3% auto;
+}
+
+.info-box:hover, .info-box-permis:hover .appo-box:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.10);
     transition: box-shadow 0.5s;
+}
+
+.info-box-permis {
+    flex: 1 1 calc(45% - 20px);
+    font-weight: 100;
+    transition: box-shadow 0.5s;
+    margin-right: 20px;
+}
+
+.contact-info {
+    font-weight: 100;
+    margin-top: 50px;
+    max-width: 60%;
+    background-color: rgba(246, 141, 39, 1);
+}
+
+.appo-box {
+    font-weight: 500;
+    max-width: 80%;
+    margin: 3% auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: left;
 }
 
 .services {
@@ -256,22 +299,18 @@ a, a:hover, a:focus, a:active {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 60%;
+    width: 6 0%;
     margin: 3% auto;
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="tel"],
-.form textarea {
+.form input[type="text"], .form input[type="email"], .form input[type="tel"], .form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.form input[type="submit"],
-.submit {
+.form input[type="submit"], .submit {
     display: inline-block;
     padding: 12px 16px;
     background-color: rgba(246, 141, 39, 1);
@@ -296,121 +335,50 @@ a, a:hover, a:focus, a:active {
     gap: 20px;
 }
 
-/* Info boxes */
-.info-box-permis {
-    flex: 1 1 calc(45% - 20px);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: 100;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10);
-    transition: box-shadow 0.5s;
+.appo {
+    flex-direction: row-reverse;
+    position: sticky;
+    float: right;
 }
 
-.info-box-permis:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.10);
-}
-
-.savoirplus {
-    align-items: center;
-    margin-top: 20px;
-    padding: 14px 16px;
-    background-color: rgba(246, 141, 39, 1);
-    color: #fff;
-    font-weight: 600;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-    border-radus: 10%;
-}
-
-.savoirplus:hover {
-    background-color: #e67e22;
-}
-
-.lespermis {
-    align-items: center;
-    margin-top: 20px;
-    padding: 6px 16px;
-    background-color: rgba(246, 141, 39, 1);
-    color: #fff;
-    font-weight: 600;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Footer styling */
-.footer {
-    background-color: rgb(36, 35, 35);
-    width: 100%;
-    padding: 20px;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 300;
-    box-sizing: border-box;
-    text-align: center;
-    color: #ffffff;
-}
-
-/* Footer heading styling */
-.footer h3 {
-    margin-bottom: 10px;
-}
-
-/* Footer sections for location, contact, opening hours */
-.footer .location, 
-.footer .contact, 
-.footer .opening-hours .theader {
-    color: #ffffff;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 5%;
-}
-
-/* Copyright Footer */
-.copyright-footer {
-    background-color: #ffffff;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 300;
-    box-sizing: border-box;
-    font-size: smaller;
-    color: #000000;
-}
-
-/* Footer opening hours font size adjustment */
-.opening-hours p {
-    font-size: 80%;
-}
-
+/* Media Queries */
 @media (max-width: 768px), (min-width: 371px) {
     .logo-container {
         max-width: 20%;
         height: fixed;
-        transition: max-width 0.5s ;
+        transition: max-width 0.5s;
+    }
+
+    .appo {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 80%;
+        height: auto;
+    }
+
+    .contact-info {
+        max-width: 80%;
+        margin: 3% auto;
     }
 }
 
-/* Media Queries */
 @media (max-width: 370px) {
-
     .logo-container {
         max-width: 100%;
         height: auto;
         align-items: center;
-        justify-content: center;     
-        padding-right: 50px;   
+        justify-content: center;
+        padding-right: 50px;
     }
+
     .banner {
         flex-direction: column;
         align-items: center;
         height: auto;
         position: relative;
     }
-
 
     .rightsidebuttons {
         padding-bottom: 30px;
@@ -429,12 +397,13 @@ a, a:hover, a:focus, a:active {
         flex: 1 1 100%;
     }
 
-    .footer .location, 
-    .footer .contact, 
-    .footer .opening-hours .theader {
+    .footer .location, .footer .contact, .footer .opening-hours .theader {
         display: block;
         text-align: center;
         margin: 20px 0;
     }
-} /* Add this closing curly brace */
+}
 
+.opening-hours p {
+    font-size: 80%;
+}
