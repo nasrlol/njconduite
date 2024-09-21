@@ -231,7 +231,7 @@ a, a:hover, a:focus, a:active {
 
 /* Info Box for main content area */
 .info-box {
-    font-weight: 300;
+    font-weight:100;
     max-width: 80%;
     margin: 3% auto;
     padding: 20px;
@@ -302,6 +302,7 @@ a, a:hover, a:focus, a:active {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    font-weight: 100;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.10);
     transition: box-shadow 0.5s;
 }
@@ -320,7 +321,7 @@ a, a:hover, a:focus, a:active {
     font-size: 15px;
     border: none;
     cursor: pointer;
-    border-radius: 10%;
+    border-radus: 10%;
 }
 
 .savoirplus:hover {
