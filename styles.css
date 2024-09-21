@@ -327,6 +327,19 @@ a, a:hover, a:focus, a:active {
     background-color: #e67e22;
 }
 
+.lespermis {
+    align-items: center;
+    margin-top: 20px;
+    padding: 6px 16px;
+    background-color: rgba(246, 141, 39, 1);
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 /* Footer styling */
 .footer {
     background-color: rgb(36, 35, 35);
