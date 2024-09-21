@@ -70,22 +70,13 @@ a, a:hover, a:focus, a:active {
     border-radius: 5px;
 }
 
-/* Theader styles */
-.theader, .footer, .copyright-footer {
+.footer, .copyright-footer {
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
     box-sizing: border-box;
     text-align: center;
 }
 
-.theader {
-    background-color: #ffffff;
-    width: 100%;
-    padding: 2px;
-    font-size: smaller;
-    color: #000000;
-    margin-top: 0;
-}
 
 /* Footer styles */
 .footer {
@@ -108,14 +99,6 @@ a, a:hover, a:focus, a:active {
 
 .footer a:hover {
     color: rgb(228, 226, 221);
-}
-
-.copyright-footer {
-    background-color: #ffffff;
-    width: 100%;
-    padding: 10px 0;
-    font-size: smaller;
-    color: #000000;
 }
 
 /* Banner styling */
@@ -281,19 +264,6 @@ a, a:hover, a:focus, a:active {
     background-color: rgba(246, 141, 39, 1);
 }
 
-.appo-box {
-    font-weight: 500;
-    max-width: 80%;
-    margin: 3% auto;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: left;
-}
-
-.services {
-    text-align: left;
-}
-
 .form {
     display: flex;
     flex-direction: column;
@@ -304,7 +274,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .form input[type="text"], .form input[type="email"], .form input[type="tel"], .form textarea {
-    width: 100%;
+    width: 60%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -335,11 +305,17 @@ a, a:hover, a:focus, a:active {
     gap: 20px;
 }
 
-.appo {
-    flex-direction: row-reverse;
-    position: sticky;
-    float: right;
+.copyright-footer {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    color: #000000;
+    font-size: 15px;
 }
+.copyright-footer a:hover{
+    color: #e4e2e2;
+}
+
+
 
 /* Media Queries */
 @media (max-width: 768px), (min-width: 371px) {
@@ -347,15 +323,6 @@ a, a:hover, a:focus, a:active {
         max-width: 20%;
         height: fixed;
         transition: max-width 0.5s;
-    }
-
-    .appo {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        max-width: 80%;
-        height: auto;
     }
 
     .contact-info {
@@ -397,7 +364,7 @@ a, a:hover, a:focus, a:active {
         flex: 1 1 100%;
     }
 
-    .footer .location, .footer .contact, .footer .opening-hours .theader {
+    .footer .location, .footer .contact, .footer .opening-hours {
         display: block;
         text-align: center;
         margin: 20px 0;
