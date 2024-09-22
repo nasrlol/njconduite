@@ -333,7 +333,7 @@ a, a:hover, a:focus, a:active {
 }
 
 /* Media Queries */
-@media (max-width: 768px), (min-width: 390px) {
+@media (max-width: 768px) {
     .logo-container {
         max-width: 20%;
         height: fixed;
