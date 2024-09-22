@@ -342,7 +342,7 @@ a, a:hover, a:focus, a:active {
 
 }
 
-@media (max-width: 395px) {
+@media (max-width: 370px) {
     .logo-container {
         max-width: 100%;
         height: auto;
@@ -383,7 +383,7 @@ a, a:hover, a:focus, a:active {
 
     .expanded {
         opacity: 1;
-        width: 105px;
+        width: 110px;
     }
 
 
