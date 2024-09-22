@@ -342,14 +342,14 @@ a, a:hover, a:focus, a:active {
 
     .expanded {
         opacity: 1;
-        width: 100px;
+        width: 110px;
         font-size: 14px;
     }
 
     .call-button-container:hover .banner-button-call-slide,
     .call-button-container .banner-button-call-slide.expanded {
         opacity: 1;
-        width: 100px;
+        width: 110px;
         font-size: 14px;
     }
 }
