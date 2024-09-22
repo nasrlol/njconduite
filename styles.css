@@ -8,6 +8,7 @@ html, body {
     background-color: rgb(247, 247, 247);
     font-family: 'Noto Sans', sans-serif;
     color: #000000;
+    font-display: swap;
 }
 
 /* Enhance font rendering on different platforms */
@@ -70,36 +71,7 @@ a, a:hover, a:focus, a:active {
     border-radius: 5px;
 }
 
-.footer, .copyright-footer {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 300;
-    box-sizing: border-box;
-    text-align: center;
-}
 
-
-/* Footer styles */
-.footer {
-    background-color: rgb(36, 35, 35);
-    width: 100%;
-    padding: 20px;
-    color: #ffffff;
-}
-
-.footer h3 {
-    margin-bottom: 10px;
-}
-
-.footer .location, .footer .contact, .footer .opening-hours .theader {
-    color: #ffffff;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 5%;
-}
-
-.footer a:hover {
-    color: rgb(228, 226, 221);
-}
 
 /* Banner styling */
 .banner {
@@ -305,15 +277,50 @@ a, a:hover, a:focus, a:active {
     gap: 20px;
 }
 
+/* Footer styles */
+.footer {
+    background-color: rgb(36, 35, 35);
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.footer, .copyright-footer {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer .location, .footer .contact, .footer .opening-hours {
+    color: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5%;
+}
+
+.footer a:hover {
+    color: rgb(228, 226, 221);
+}
+
 .copyright-footer {
     background-color: rgb(255, 255, 255);
     padding: 5px;
     color: #000000;
-    font-size: 15px;
+    font-size: 13px;
 }
 .copyright-footer a:hover{
     color: #e4e2e2;
 }
+
+.opening-hours p {
+    font-size: 80%;
+}
+
 
 
 
@@ -323,11 +330,6 @@ a, a:hover, a:focus, a:active {
         max-width: 20%;
         height: fixed;
         transition: max-width 0.5s;
-    }
-
-    .contact-info {
-        max-width: 80%;
-        margin: 3% auto;
     }
 }
 
@@ -371,6 +373,3 @@ a, a:hover, a:focus, a:active {
     }
 }
 
-.opening-hours p {
-    font-size: 80%;
-}
