@@ -305,8 +305,30 @@ a:active {
 
     border-radius: 100%;
     border-width: 1px;
-    }
+}
     
+
+.lic{
+    display: inline-block;
+    padding: 0% 0%;
+    background-color: white;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.lic:hover{
+  background-color: #e67e22;
+  
+}
+
 
 /* Info box container */
 .info-container {
