@@ -327,7 +327,7 @@ a, a:hover, a:focus, a:active {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     .logo-container {
         max-width: 20%;
         height: fixed;
@@ -346,6 +346,8 @@ a, a:hover, a:focus, a:active {
         width: 110px;
         font-size: 14px;
     }
+
+
 }
 
 @media (max-width: 390px) {
@@ -389,14 +391,16 @@ a, a:hover, a:focus, a:active {
 
     .expanded {
         opacity: 1;
-        width: 90px;
+        width: 100px;
     }
 
     .call-button-container:hover .banner-button-call-slide,
     .call-button-container .banner-button-call-slide.expanded {
         opacity: 1;
-        width: 90px;
+        width: 100px;
         font-size: 12px;
     }
+
+
 }
 
