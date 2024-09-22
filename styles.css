@@ -200,13 +200,7 @@ a, a:hover, a:focus, a:active {
     opacity: 1;
     width: 150px;
     font-size: 14px;
-}
-
-.call-button-container:hover .banner-button-call-slide,
-.call-button-container .banner-button-call-slide.expanded {
-    opacity: 1;
-    width: 150px;
-    font-size: 14px;
+    margin-left: -2px; /* Add this line to fix the margin issue */
 }
 
 /* Info Box for main content area */
