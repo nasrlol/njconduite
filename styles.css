@@ -242,6 +242,14 @@ a:active {
   transition: box-shadow 0.5s;
 }
 
+.theader{
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 3px;
+}
 .info-box-permis {
   flex: 1 1 calc(45% - 20px);
   font-weight: 100;
