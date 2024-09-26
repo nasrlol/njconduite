@@ -232,6 +232,11 @@ a:active {
   text-align: center;
 }
 
+.info-box-permis:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s;
+}
+
 .info-box {
   font-weight: 100;
   max-width: 80%;
@@ -283,6 +288,12 @@ a:active {
   width: 60%;
   margin: 3% auto;
 }
+
+form input:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
 
 .form input[type="text"],
 .form input[type="email"],
@@ -355,23 +366,29 @@ a:active {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
 .chat-message {
-  background-color: #f1f0f0;
+  background-color: rgb(247, 247, 247);
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  border: 2px solid #000000;
 }
 
 .user-message {
-  background-color: #dcf8c6;
+  border-color: rgba(246, 141, 39, 1);
+  text-align: right;
+  font-weight: 300;
+  color: #000000;
+  border-style: 3px solid;
+  border-radius: 5px;
+  border-width: 2px;
 }
 
 .bot-message {
-  background-color: #fff;
+  background-color: rgb(247, 247, 247);
+  text-align: left;
 }
 
 .chat-input {

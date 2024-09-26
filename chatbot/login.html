@@ -63,10 +63,9 @@
             </div>
         </nav>
     </header>
-
     <section class="info-box">
         <h1>Veuillez remplir les informations pour continuer</h1>
-        <form class="form-group">
+        <form class="form-group" action="/chatbot/login.html" method="POST">
             <div class="form">
                 <label for="name">Nom</label>
                 <input type="text" id="name" name="name" required>
@@ -83,7 +82,7 @@
                 <label for="phone">Numéro de téléphone</label>
                 <input type="tel" id="phone" name="phone" required>
             </div>
-            <button class="submit" type="submit"><a href="chatpage.html"><img src="/images/send.png"></a></button>
+            <button class="submit" type="submit"><img src="/images/send.png"></button>
         </form>
     </section>
 
