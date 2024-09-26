@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('chatbot/login', methods=['POST'])
+@app.route('/chatbot/login.html', methods=['POST'])
 def login():
   
   print(request.form)  
@@ -23,7 +23,7 @@ def login():
   body = request.form['body']
 
   # Store the message or any other relevant information in a file
-  with open('/home/nasr/web-dev/login.txt', 'a') as file:
+  with open('/home/nasr/web-dev/chatbot/login.txt', 'a') as file:
     file.write(f"From: {from_number}\n")
     file.write(f"To: {to_number}\n")
     file.write(f"Body: {body}\n\n")
@@ -35,4 +35,4 @@ def login():
 
 
 if __name__ == '__main__':
-  app.run()
+  app.run(debug=True)

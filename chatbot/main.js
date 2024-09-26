@@ -24,4 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
             callButtonSlide.classList.remove('expanded');
         }
     });
+
+    // Make a POST request to the backend endpoint
+    fetch('http://localhost:5000/app.py', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ key: 'value' })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
 });
