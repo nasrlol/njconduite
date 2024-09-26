@@ -24,16 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
             callButtonSlide.classList.remove('expanded');
         }
     });
+});
+
 
     // Make a POST request to the backend endpoint
-    fetch('http://localhost:5000/app.py', {
+    fetch('http://localhost:5000/chatbot/login.html', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: JSON.stringify({ key: 'value' })
     })
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
-});
