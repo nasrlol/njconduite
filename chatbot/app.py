@@ -2,15 +2,25 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/chatbot/login', methods=['POST'])
+@app.route('login.html', methods=['POST'])
 def login():
+  
+  print(request.form)  
+  # Debugging to see what's being received
+  # Rest of your logic here
+  
   # Get the data from the front-end chatbot
-  data = request.get_json()
+  # Remove the unused variables
+  request.form['name']
+  request.form['last-name']
+  request.form['email']
+
+
 
   # Extract the necessary information
-  from_number = data['from_number']
-  to_number = data['to_number']
-  body = data['body']
+  from_number = request.form['from_number']
+  to_number = request.form['to_number']
+  body = request.form['body']
 
   # Store the message or any other relevant information in a file
   with open('/home/nasr/web-dev/login.txt', 'a') as file:
@@ -21,6 +31,8 @@ def login():
 
   # Return a response to the front-end chatbot
   return {'message': 'Message received successfully'}
+
+
 
 if __name__ == '__main__':
   app.run()
