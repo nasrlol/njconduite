@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('login.html', methods=['POST'])
+@app.route('chatbot/login', methods=['POST'])
 def login():
   
   print(request.form)  
