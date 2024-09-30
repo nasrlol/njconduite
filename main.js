@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Dropdown toggle
-    document.querySelector('.dropdown .banner-button').addEventListener('click', function () {
-        const dropdownMenu = document.querySelector('.dropdown-menu');
-        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-    });
-
-    // Call button slide
+    // Cache DOM elements
+    const dropdownButton = document.querySelector('.dropdown .banner-button');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
     const callButtonSlide = document.querySelector('.banner-button-call-slide');
     const callButtonContainer = document.querySelector('.call-button-container');
     const callButton = document.querySelector('.banner-button-call');
+
+    // Dropdown toggle
+    dropdownButton.addEventListener('click', function () {
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
 
     // Toggle the call slide when clicking the container (which includes the call button)
     callButton.addEventListener('click', function(event) {
@@ -32,4 +33,11 @@ window.addEventListener('load', function() {
     splash.addEventListener('click', function() {
         splash.classList.add('splashscreen-hidden');
     });
+
+    // Hide splash screen after 2 seconds if not clicked
+    setTimeout(function() {
+        if (!splash.classList.contains('splashscreen-hidden')) {
+            splash.classList.add('splashscreen-hidden');
+        }
+    }, 1500);
 });
