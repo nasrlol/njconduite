@@ -39,5 +39,5 @@ window.addEventListener('load', function() {
         if (!splash.classList.contains('splashscreen-hidden')) {
             splash.classList.add('splashscreen-hidden');
         }
-    }, 1500);
+    }, 1800);
 });

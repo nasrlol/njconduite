@@ -36,12 +36,12 @@ a:active {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #4c2e13;
+  background-color: rgb(36, 35, 35);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
 }
 
 .splash-logo-container {
@@ -69,6 +69,12 @@ a:active {
   50% {
     opacity: 1;
   }
+}
+
+.splashscreen-hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
 }
 
 .splashscreen-hidden {
@@ -144,7 +150,7 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 130px;
+  height: 100px;
   box-sizing: border-box;
   position: sticky;
   top: 0;
@@ -156,7 +162,7 @@ a:active {
   padding: 20px;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 100px;
 }
 
 .logo {
