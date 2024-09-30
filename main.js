@@ -26,3 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+window.addEventListener('load', function() {
+    const splash = document.getElementById('mainSplash');
+    
+    splash.addEventListener('click', function() {
+        splash.classList.add('splashscreen-hidden');
+    });
+});

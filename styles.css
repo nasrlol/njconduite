@@ -11,6 +11,7 @@ body {
   color: #000000;
   font-display: swap;
   overflow-x: hidden;
+
 }
 
 /* Enhance font rendering on different platforms */
@@ -27,6 +28,47 @@ a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
+}
+
+/* Splash Screen Styling */
+.splashscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e67e22; /* Background color to match the brand */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.splash-logo-container {
+  text-align: center;
+  color: #ffffff;
+}
+
+.splash-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+  animation: fadein 1.5s ease-in-out infinite;
+}
+
+/* Simple fade-in animation for logo */
+@keyframes fadein {
+  0%, 100% {
+      opacity: 0.8;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+.splashscreen-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* Common button styles */
