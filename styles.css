@@ -247,6 +247,15 @@ a {
   text-align: center;
 }
 
+.avis{
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
 .info-box-permis:hover, .info-box:hover{
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.539), 0 6px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.5s;
@@ -319,6 +328,10 @@ a {
   gap: 20px;
 }
 
+.services {
+  text-align: left;
+}
+
 
 /* Footer */
 .footer {
@@ -346,7 +359,7 @@ a {
 .copyright-footer{
 
   font-size: 12px;
-  padding: 5px;
+  padding: 8px;
   text-align: center;
 }
 
