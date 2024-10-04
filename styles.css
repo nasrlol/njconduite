@@ -16,7 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-main{
+main {
   background-color: rgb(36, 35, 35);
   background-image: url(images/bc.webp);
   background-repeat: no-repeat;
@@ -46,7 +46,6 @@ a {
   margin: 0 10px; /* Add space between the two <p> elements */
 }
 
-
 /* Splash Screen */
 .splashscreen {
   position: fixed;
@@ -59,7 +58,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
 }
 
 .splash-logo-container {
@@ -144,14 +143,6 @@ a {
 
   .info-box-permis {
     flex: 1 1 100%;
-  }
-
-  .footer .location,
-  .footer .contact,
-  .footer .opening-hours {
-    display: block;
-    text-align: center;
-    margin: 20px 0;
   }
 
   .expanded {
@@ -373,7 +364,6 @@ a {
   cursor: pointer;
 }
 
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -381,7 +371,7 @@ a {
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-5px);
   }
 }
 
@@ -401,12 +391,13 @@ a {
   margin: 20px auto; /* Centered with equal margin on top and bottom */
 }
 
-.info-box:hover, .info-box:hover {
-  box-shadow: 0 10px 20px rgba(252, 250, 250, 0.665), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+.info-box:hover,
+.info-box:hover {
+  box-shadow: 0 10px 20px rgba(252, 250, 250, 0.665),
+    0 6px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
 }
-
-
 
 .info-box-permis {
   opacity: 0;
@@ -424,7 +415,6 @@ a {
   text-align: center;
   color: black;
   margin: 10px; /* Added margin for spacing */
-  
 
   max-width: fit-content;
   margin-left: auto;
@@ -444,11 +434,10 @@ a {
 }
 
 .info-box.visible {
-  animation: fadeIn 0.8s forwards;
+  animation: fadeIn 1.5s forwards;
 }
 .info-box-permis.visible {
-  animation: fadeIn 0.8s forwards;
-
+  animation: fadeIn 3s forwards;
 }
 .contact-info {
   width: 100%;
@@ -487,41 +476,53 @@ a {
   max-width: 80%;
   margin: 3% auto;
   gap: 20px;
-  
 }
 
-/* Footer */
 .footer {
   background-color: rgb(36, 35, 35);
   color: #fff;
   width: 100%;
-  padding: 20px 5%; /* More padding for mobile responsiveness */
+  padding: 20px 5%;
   text-align: center;
   font-weight: 300;
-  border-top: 1px solid #413d3d;
   display: flex;
-  flex-wrap: wrap; /* Allows the footer to wrap on smaller screens */
-  justify-content: space-between;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch; /* Ensures all articles have equal height */
+  gap: 10px;
 }
 
 .footer article {
-  flex: 1; /* Ensures even distribution of space */
-  min-width: 250px; /* Sets a minimum width to avoid layout breaking */
-  text-align: left;
+  flex: 1; /* Ensures all sections grow equally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;
+  min-height: 150px; /* Adjust the height as needed */
+}
+
+.footer article h3 {
+  margin-bottom: 10px;
+}
+
+.footer article p,
+.footer article a {
+  margin: 0;
+}
+
+/* Optional: Smaller text size for smaller screens */
+@media (max-width: 780px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .footer article {
+    min-height: auto; /* Remove fixed height for mobile */
+  }
 }
 
 .footer a:hover {
   color: rgb(228, 226, 221);
-}
-
-.map {
-  border-radius: 8px; /* Less drastic border-radius for a professional look */
-  width: 100%; /* Make the image responsive to container width */
-  max-width: 200px;
-  display: block;
-  max-width: fit-content;
-  margin-left: 0 auto;
 }
 
 /* Copyright Section */
@@ -531,38 +532,9 @@ a {
   font-size: 12px;
   padding: 1px;
   text-align: center;
-  margin-top: 20px; /* Adds space between sections */
 }
 
-/* Opening Hours Text Size */
-.opening-hours p {
-  font-size: 90%; /* Slightly larger for readability */
-}
-
-.footer h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Aligns all text centrally on mobile */
-  }
-
-  .footer article {
-    text-align: center;
-  }
-  .map{
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 780px) {
+@media (max-width: 750px) {
   .dropdown {
     display: block;
   }
@@ -572,11 +544,6 @@ a {
 }
 
 @media (max-width: 650px) {
-  .logo-container {
-    width: 80%;
-
-  }
-
   .expanded {
     width: 110px;
   }
@@ -598,13 +565,5 @@ a {
 
   .rightsidebuttons {
     padding-bottom: 15px;
-  }
-
-  .footer .location,
-  .footer .contact,
-  .footer .opening-hours {
-    display: block;
-    text-align: center;
-    margin: 20px 0;
   }
 }

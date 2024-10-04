@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   const callButtonSlide = document.querySelector(".banner-button-call-slide");
   const callButtonContainer = document.querySelector(".call-button-container");
   const callButton = document.querySelector(".banner-button-call");
 
-
-
   // Toggle the call slide when clicking the container (which includes the call button)
-  callButton.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent event from bubbling up
-    callButtonSlide.classList.toggle("expanded");
-  });
+  if (callButton) {
+    callButton.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent event from bubbling up
+      callButtonSlide.classList.toggle("expanded");
+    });
+  }
 
   // Close the slide if clicked outside the call button or the slide itself
   document.addEventListener("click", function (event) {
@@ -22,51 +21,52 @@ document.addEventListener("DOMContentLoaded", function () {
       callButtonSlide.classList.remove("expanded");
     }
   });
-});
 
-document.querySelector('.menuButton').addEventListener('click', function() {
+  // Menu button for opening and closing side navigation
+  const menuButton = document.querySelector('.menuButton');
   const sideNav = document.getElementById('dropdownMenu');
-  if (sideNav.classList.contains('open')) {
-    sideNav.classList.remove('open');
-  } else {
-    sideNav.classList.add('open');
+  
+  if (menuButton && sideNav) {
+    menuButton.addEventListener('click', function () {
+      sideNav.classList.toggle('open');
+    });
   }
-});
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  })
-})
-
-const infoBoxes = document.querySelectorAll('.info-box' );
-
-infoBoxes.forEach(infoBox => {
-  observer.observe(infoBox);
-
-});
-
-const infoBoxesPermis = document.querySelectorAll('.info-box-permis');
-
-infoBoxesPermis.forEach(BoxesPermis => {
-  observer.observe(BoxesPermis);
-
-});
-
-window.addEventListener("load", function () {
-  const splash = document.getElementById("mainSplash");
-
-  splash.addEventListener("click", function () {
-    splash.classList.add("splashscreen-hidden");
+  // Intersection Observer for info-box elements
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Stop observing once it's visible
+      }
+    });
   });
 
-  // Hide splash screen after 2 seconds if not clicked
-  setTimeout(function () {
-    if (!splash.classList.contains("splashscreen-hidden")) {
-      splash.classList.add("splashscreen-hidden");
+  // Observe regular .info-box elements (start immediately)
+  const infoBoxes = document.querySelectorAll('.info-box');
+  infoBoxes.forEach(infoBox => {
+    observer.observe(infoBox);
+  });
+
+  // Splash screen logic
+  window.addEventListener("load", function () {
+    const splash = document.getElementById("mainSplash");
+
+    if (splash) {
+      const hideSplash = function () {
+        splash.classList.add("splashscreen-hidden");
+
+        // Start observing .info-box-permis elements only after splash screen disappears
+        const infoBoxesPermis = document.querySelectorAll('.info-box-permis');
+        infoBoxesPermis.forEach(BoxesPermis => {
+          observer.observe(BoxesPermis);
+        });
+      };
+
+      splash.addEventListener("click", hideSplash);
+
+      // Automatically hide the splash screen after 1.3 seconds and start the animation
+      setTimeout(hideSplash, 1300);
     }
-  }, 1800);
+  });
 });
