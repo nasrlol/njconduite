@@ -22,15 +22,12 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-
-
 
 /* Splash Screen */
 .splashscreen {
@@ -357,7 +354,7 @@ a {
   }
   100% {
     opacity: 1;
-    transform: translateY(-5px);
+    transform: translateY(-30px);
   }
 }
 
@@ -374,9 +371,9 @@ a {
   text-align: center;
   color: black;
   font-weight: 200;
-  margin: 20px auto; /* Centered with equal margin on top and bottom */
-}
+  margin: 20px auto; 
 
+}
 
 .info-box:hover,
 .info-box:hover {
@@ -401,7 +398,6 @@ a {
   text-align: center;
   color: black;
   margin: 10px; /* Added margin for spacing */
-
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -420,7 +416,7 @@ a {
 }
 
 .info-box.visible {
-  animation: fadeIn 1.5s forwards;
+  animation: fadeIn 3s forwards;
 }
 .info-box-permis.visible {
   animation: fadeIn 3s forwards;
@@ -464,7 +460,6 @@ a {
   gap: 20px;
 }
 
-
 .footer {
   background-color: rgb(36, 35, 35);
   color: #fff;
@@ -479,6 +474,7 @@ a {
   align-items: baseline; /* Ensures all articles have equal height */
   gap: 10px;
   margin-bottom: 10%;
+  border-top: solid 1px gray;
 }
 
 .footer article {
@@ -487,16 +483,14 @@ a {
   flex-direction: column;
   justify-content: center; /* Centers content vertically */
   align-items: center;
- 
+
   min-height: 150px; /* Adjust the height as needed */
 }
 
-
-.footer h3{
+.footer h3 {
   align-items: start;
   top: 0;
 }
-
 
 .footer article p,
 .footer article a {
@@ -508,17 +502,15 @@ a {
   .footer {
     flex-direction: column; /* Stack items vertically on smaller screens */
     background-color: rgb(255, 255, 255);
-    border-radius: 69% 31% 46% 54% / 40% 48% 52% 60%  ;
+    border-radius: 55% 45% 54% 46% / 51% 54% 46% 49%  ;
     align-items: stretch; /* Ensures all articles have equal height */
 
-  
     color: #000000;
   }
 
   .footer article {
     min-height: auto; /* Remove fixed height for mobile */
   }
-
 }
 
 .footer a:hover {
