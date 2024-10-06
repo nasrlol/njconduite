@@ -371,8 +371,7 @@ a {
   text-align: center;
   color: black;
   font-weight: 200;
-  margin: 20px auto; 
-
+  margin: 20px auto;
 }
 
 .info-box:hover,
@@ -474,7 +473,7 @@ a {
   align-items: baseline; /* Ensures all articles have equal height */
   gap: 10px;
   margin-bottom: 10%;
-  border-top: solid 1px gray;
+  border-top: 1px solid #413d3d;
 }
 
 .footer article {
@@ -483,7 +482,6 @@ a {
   flex-direction: column;
   justify-content: center; /* Centers content vertically */
   align-items: center;
-
   min-height: 150px; /* Adjust the height as needed */
 }
 
@@ -501,12 +499,12 @@ a {
 @media (max-width: 500px) {
   .footer {
     flex-direction: column; /* Stack items vertically on smaller screens */
-    background-color: rgb(255, 255, 255);
-    border-radius: 55% 45% 54% 46% / 51% 54% 46% 49%  ;
+    border-radius: 59% 41% 49% 51% / 42% 31% 69% 58% ;
+    background-color: rgba(255, 255, 255, 0.288);
     align-items: stretch; /* Ensures all articles have equal height */
-
-    color: #000000;
+    color: #ffffff;
   }
+ 
 
   .footer article {
     min-height: auto; /* Remove fixed height for mobile */
