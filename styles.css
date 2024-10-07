@@ -388,6 +388,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 140px;
   width: 180px; /* Reduced width for smaller boxes */
   max-width: 90%; /* Allow boxes to shrink in smaller viewports */
   background-color: #fdfdfde9;
@@ -499,12 +500,11 @@ a {
 @media (max-width: 500px) {
   .footer {
     flex-direction: column; /* Stack items vertically on smaller screens */
-    border-radius: 59% 41% 49% 51% / 42% 31% 69% 58% ;
+    border-radius: 59% 41% 49% 51% / 42% 31% 69% 58%;
     background-color: rgba(255, 255, 255, 0.288);
     align-items: stretch; /* Ensures all articles have equal height */
     color: #ffffff;
   }
- 
 
   .footer article {
     min-height: auto; /* Remove fixed height for mobile */
