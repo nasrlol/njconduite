@@ -61,6 +61,14 @@ a {
   animation: fadein 1.5s ease-in-out infinite;
 }
 
+
+
+.splashscreen-hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
 @keyframes fadein {
   0%,
   100% {
@@ -71,76 +79,6 @@ a {
   }
 }
 
-.splashscreen-hidden {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-}
-
-/* Media Queries */
-@media (max-width: 650px) {
-  .logo-container {
-    max-width: 20%;
-    transition: max-width 0.5s;
-  }
-
-  .expanded {
-    width: 110px;
-  }
-
-  .splash-logo-container {
-    max-width: 300px;
-  }
-
-  .splash-logo {
-    max-width: 400px;
-    margin-top: -100px;
-  }
-  .dropdown {
-    display: none;
-  }
-}
-
-@media (max-width: 370px) {
-  .logo-container {
-    max-width: 100%;
-    padding-right: 50px;
-  }
-
-  .banner {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .rightsidebuttons {
-    padding-bottom: 30px;
-    max-width: fit-content;
-    margin: 0 auto;
-  }
-
-  .dropdown-menu {
-    min-width: 150px;
-    left: 0;
-  }
-
-  .info-box-permis {
-    flex: 1 1 100%;
-  }
-
-  .expanded {
-    width: 110px;
-  }
-
-  .splash-logo-container {
-    max-width: 300px;
-  }
-
-  .splash-logo {
-    max-width: 400px;
-    margin-top: -100px;
-  }
-}
 
 /* Buttons */
 .banner-button,
@@ -210,6 +148,22 @@ a {
   gap: 10px;
   padding-left: 20px;
 }
+
+.infoBlock {
+  
+  position: relative;
+  display: hidden;
+  color: #413d3d;
+  opacity: 0;
+  font-size: 18px;
+
+}
+
+.dropdownInfo {
+  position: relative;
+}
+
+
 
 .call-button-container {
   display: flex;
@@ -327,12 +281,10 @@ a {
   gap: 10px;
 }
 
-.fullButton {
-  font-family: "Noto Sans Cherokee";
-  font-weight: 400;
-}
 
 .fullButton {
+  font-family: "Noto Sans Cherokee" !important;
+  font-weight: 400 !important;
   min-width: 110px;
   padding: 14px;
   background-color: rgba(246, 141, 39, 1);
@@ -340,6 +292,7 @@ a {
   color: white;
   border-radius: 5px;
   font-size: 16px;
+  position: fixed;
 }
 
 .fullButton:hover {
@@ -350,11 +303,11 @@ a {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
 }
 
@@ -403,11 +356,7 @@ a {
   margin-right: auto;
 }
 
-.info-box-permis img {
-  max-width: 60px; /* Reduced max-width for smaller images */
-  height: auto;
-  margin-bottom: 10px;
-}
+
 
 .info-box-permis h3 {
   font-size: 14px; /* Reduced font size for a cleaner look */
@@ -416,10 +365,10 @@ a {
 }
 
 .info-box.visible {
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
 }
 .info-box-permis.visible {
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
 }
 .contact-info {
   width: 100%;
@@ -496,6 +445,19 @@ a {
   margin: 2px;
 }
 
+
+.footer a:hover {
+  color: rgb(228, 226, 221);
+}
+
+/* Copyright Section */
+.copyright-footer {
+  border-top: 1px solid #413d3d;
+  color: white;
+  font-size: 12px;
+  padding: 1px;
+  text-align: center;
+}
 /* Optional: Smaller text size for smaller screens */
 @media (max-width: 500px) {
   .footer {
@@ -509,19 +471,6 @@ a {
   .footer article {
     min-height: auto; /* Remove fixed height for mobile */
   }
-}
-
-.footer a:hover {
-  color: rgb(228, 226, 221);
-}
-
-/* Copyright Section */
-.copyright-footer {
-  border-top: 1px solid #413d3d;
-  color: white;
-  font-size: 12px;
-  padding: 1px;
-  text-align: center;
 }
 
 @media (max-width: 750px) {
@@ -555,5 +504,70 @@ a {
 
   .rightsidebuttons {
     padding-bottom: 15px;
+  }
+}
+/* Media Queries */
+@media (max-width: 650px) {
+  .logo-container {
+    max-width: 20%;
+    transition: max-width 0.5s;
+  }
+
+  .expanded {
+    width: 110px;
+  }
+
+  .splash-logo-container {
+    max-width: 300px;
+  }
+
+  .splash-logo {
+    max-width: 400px;
+    margin-top: -100px;
+  }
+  .dropdown {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  .logo-container {
+    max-width: 100%;
+    padding-right: 50px;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .rightsidebuttons {
+    padding-bottom: 30px;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  .dropdown-menu {
+    min-width: 150px;
+    left: 0;
+  }
+
+  .info-box-permis {
+    flex: 1 1 100%;
+  }
+
+  .expanded {
+    width: 110px;
+  }
+
+
+  .splash-logo-container {
+    max-width: 300px;
+  }
+
+  .splash-logo {
+    max-width: 400px;
+    margin-top: -100px;
   }
 }
