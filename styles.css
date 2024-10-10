@@ -471,7 +471,7 @@ a {
   .footer article {
     min-height: auto; /* Remove fixed height for mobile */
   }
-}
+
 
 @media (max-width: 750px) {
   .dropdown {
@@ -495,6 +495,9 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+  .fullContainer {
+    display: none;
+  }
 
   .banner {
     flex-direction: column;
@@ -514,7 +517,7 @@ a {
   }
 
   .expanded {
-    width: 110px;
+    display: hidden;
   }
 
   .splash-logo-container {
@@ -526,8 +529,9 @@ a {
     margin-top: -100px;
   }
   .dropdown {
-    display: none;
+    display: block;
   }
+
 }
 
 @media (max-width: 370px) {
