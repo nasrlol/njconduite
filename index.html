@@ -5,86 +5,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="NJ Conduite - Auto-école moderne et flexible à Berre-l'Étang" />
+  <meta name="robots" content="index, follow" />
   <meta name="keywords"
-    content="nj conduite, NJ CONDUITE, NJ, CONDUITE, auto école, auto école berre l'étang, auto, voiture, conduire, driving school, école de conduite, permis de conduire, berre l'étang, marseille" />
+    content="auto école Berre-l'Étang, permis de conduire, conduite accompagnée, code de la route" />
   <meta name="author" content="nsrddyn" />
   <link rel="icon" href="/images/favicon.ico" />
-  <link rel="shortcut icon" href="/images/favicon.ico" />
   <title>NJ CONDUITE</title>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL7QKZF7C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-1QL7QKZF7C");
-  </script>
-
-  <!-- Fonts -->
+  <!-- Preload fonts for better performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL7QKZF7C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-1QL7QKZF7C");
+  </script>
+
   <!-- Scripts -->
   <script defer src="main.js"></script>
-
-
 </head>
 
 <body>
   <div class="splashscreen" id="mainSplash">
     <div class="splash-logo-container">
-      <img src="images/biglogo.png" alt="NJ CONDUITE" class="splash-logo" />
+      <img src="images/biglogo.png" alt="NJ CONDUITE logo" class="splash-logo" />
     </div>
   </div>
-
 
   <header class="banner">
     <div class="logo-container">
       <a href="index.html">
-        <img src="images/njconduitemini.png" alt="NJ CONDUITE" class="logo" loading="lazy" />
+        <img src="images/njconduitemini.png" alt="NJ CONDUITE logo" class="logo" loading="lazy">
       </a>
-
     </div>
 
-    <nav class="rightsidebuttons">
-
-      <!--this is for the banner buttons that appear when the screen gets expanded, on hover they should slide down an info block-->
-      <div class="fullContainer">
-        <div class="dropdownInfo"><a href="pages/permis.html"><button class="fullButton"
-              aria-label="Menu button">PERMIS</button></a>
-          <div class="infoBlock" id="infoPermis">
-            <p>meer info over permis</p>
+    <nav class="rightsidebuttons"> <!--Level 1-->
+      <div class="topinfoContainer"> <!--Level 2-->
+        <!-- Permis Section -->
+        <div class="topinfo"> <!--Level 3-->
+          <a href="pages/permis.html" aria-label="Informations sur le permis">
+            <button class="fullButton">PERMIS</button>  <!--Level 4-->
+          </a>
+          <div class="infoBlock">
+            <p>Plus d'informations sur le permis</p>
           </div>
         </div>
 
-        <div class="dropdownInfo"><a href="pages/coderoute.html"><button class="fullButton" aria-label="Menu button">LE
-              CODE</button></a>
-          <div class="infoBlock" id="infoPermis">
-            <p>meer info over permis</p>
+        <!-- Code de la Route Section -->
+        <div class="topinfo">
+          <a href="pages/coderoute.html" aria-label="Informations sur le code de la route">
+            <button class="fullButton">LE CODE</button>
+          </a>
+          <div class="infoBlock">
+            <p>Plus d'informations sur le code de la route</p>
           </div>
         </div>
 
-        <div class="dropdownInfo"><a href="pages/contact.html""> <button class=" fullButton"
-            aria-label="Menu button">CONTACT</button></a>
-          <div class="infoBlock" id="infoPermis">
-            <p>meer info over permis</p>
+        <!-- Contact Section -->
+        <div class="topinfo">
+          <a href="pages/contact.html" aria-label="Contactez-nous">
+            <button class="fullButton">CONTACT</button>
+          </a>
+          <div class="infoBlock">
+            <p>Contactez-nous pour plus d'informations</p>
           </div>
         </div>
-
-
       </div>
 
-
-      <div class="dropdown">
-        <button class="menuButton" aria-label="Menu button">
-          <img src="images/menu.svg" alt="menu">
-          <div class="dropdown-menu" id="dropdownMenu">
-            <div class="exitMenu"><img src="images/cross.svg" alt="menu"></div>
+      <div class="dropdown">  <!--Level 2-->
+        <button class="menuButton" aria-label="Menu button"> <!--Level 3-->
+          <img src="images/menu.svg" alt="Menu" />
+          <div class="dropdown-menu" id="dropdownMenu"> <!--Level 4-->
+            <div class="close"><img src="images/cross.svg" alt="Close menu"></div>
             <a href="pages/contact.html">CONTACT</a>
             <a href="pages/coderoute.html">LE CODE</a>
             <a href="pages/permis.html">PERMIS</a>
@@ -95,14 +94,14 @@
       </div>
 
       <a href="#">
-        <button class="banner-button-chat">
-          <img src="/images/chat.svg" alt="parlez-nous" />
+        <button class="banner-button-chat" aria-label="Chat with us">
+          <img src="/images/chat.svg" alt="Parlez-nous" />
         </button>
       </a>
 
       <div class="call-button-container">
         <button class="banner-button-call" aria-label="Call us">
-          <img src="images/phone.svg" alt="appelez-nous" />
+          <img src="images/phone.svg" alt="Appelez-nous" />
         </button>
         <button class="banner-button-call-slide">
           <a href="tel:0442854015">0442854015</a>
@@ -112,30 +111,25 @@
   </header>
 
   <main>
-    <!-- Section for Permis Information -->
     <section class="info-container">
       <article class="info-box-permis">
         <h3>Permis B</h3>
       </article>
-
       <article class="info-box-permis">
         <h3>Conduite Accompagnée</h3>
       </article>
       <article class="info-box-permis">
         <h3>Permis Moto (A, A1, A2)</h3>
       </article>
-
     </section>
 
-
-    <!-- Section for Training Information -->
     <section class="info-box">
       <header>
         <h2>Nos formations</h2>
       </header>
       <p>
-        NJ Conduite propose une formation complète au permis, incluant 48h de cours de code,
-        30h de conduite avec simulateur, et la conduite supervisée illimitée.
+        NJ Conduite propose une formation complète incluant 48h de code, 30h de conduite avec simulateur, et la conduite
+        supervisée illimitée.
       </p>
       <ul>
         <li>Permis B (voiture)</li>
@@ -143,39 +137,27 @@
         <li>Permis BE (remorque)</li>
         <li>Conduite accompagnée</li>
       </ul>
-      <a href="/pages/coderoute.html" class="btn"><img src="/images/info.png" alt=""></img></a>
     </section>
 
-    <!-- Section for Online and In-Person Courses -->
     <section>
       <article class="info-box">
         <h2>Cours en Ligne</h2>
-        <p>
-          Accédez à nos cours de code en ligne à toute heure, où que vous soyez.
-        </p>
+        <p>Accédez à nos cours de code en ligne à toute heure, où que vous soyez.</p>
       </article>
       <article class="info-box">
         <h2>Sessions Présentielles</h2>
-        <p>
-          Participez à des sessions en petit groupe avec un formateur qualifié.
-        </p>
+        <p>Participez à des sessions en petit groupe avec un formateur qualifié.</p>
       </article>
       <article class="info-box">
         <h2>Permis</h2>
-        <p>
-          En ligne, en présentiel ou les deux.
-          <a href="permis.html">Visitez notre page permis</a> pour en savoir plus.
-        </p>
+        <p>En ligne, en présentiel ou les deux. <a href="pages/permis.html">Visitez notre page permis</a> pour en savoir
+          plus.</p>
       </article>
     </section>
   </main>
 
   <footer>
     <section class="footer">
-      <!-- Location Section -->
-
-
-      <!-- Contact Section -->
       <article class="contact">
         <h3>Contact</h3>
         <a href="mailto:njconduite@gmail.com">
@@ -187,11 +169,8 @@
         <h3>Location</h3>
         <a href="https://maps.app.goo.gl/dfFSUVzosSf1zXka8" target="_blank" rel="noopener noreferrer">
           <p>13130 Berre-L'Étang, 35 Av. de la libération</p>
-
         </a>
       </article>
-
-      <!-- Opening Hours Section -->
       <article class="opening-hours">
         <h3>Horaires</h3>
         <p>Lundi: fermé</p>
@@ -199,11 +178,7 @@
         <p>Samedi: 10h-12h</p>
         <p>Dimanche: fermé</p>
       </article>
-
-
     </section>
-
-    <!-- Copyright Section -->
     <section class="copyright-footer">
       <p>© 2024 NJ Conduite - Auto-école Berre-l'Étang |
         <a href="https://github.com/nasrlol" target="_blank" rel="noopener noreferrer">nsrddyn</a> |

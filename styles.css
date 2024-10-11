@@ -56,29 +56,15 @@ a {
   flex-direction: column;
   align-items: center;
 }
-
-.splash-logo {
+¨ .splash-logo {
   animation: fadein 1.5s ease-in-out infinite;
 }
-
-
 
 .splashscreen-hidden {
   opacity: 0;
   visibility: hidden;
   height: 0;
 }
-
-@keyframes fadein {
-  0%,
-  100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 
 /* Buttons */
 .banner-button,
@@ -99,8 +85,7 @@ a {
 
 .banner-button:hover,
 .banner-button-call:hover,
-.banner-button-chat:hover,
-.savoirplus:hover {
+.banner-button-chat:hover {
   background-color: #e67e22;
 }
 
@@ -110,13 +95,6 @@ a {
 
 .banner-button-chat {
   margin-right: 10px;
-}
-
-.savoirplus {
-  margin-top: 20px;
-  border-radius: 100%;
-  padding: 0;
-  background-color: white;
 }
 
 .banner {
@@ -150,20 +128,18 @@ a {
 }
 
 .infoBlock {
-  
   position: relative;
   display: hidden;
   color: #413d3d;
   opacity: 0;
   font-size: 18px;
-
 }
 
-.dropdownInfo {
+.topinfo {
+  display: flex;
+  align-items: center;
   position: relative;
 }
-
-
 
 .call-button-container {
   display: flex;
@@ -183,16 +159,34 @@ a {
   border: none;
   border-radius: 10%;
   transition: background-color 0.3s ease;
+  margin: auto;
 }
 
 .menuButton:hover {
   background-color: #e67e22;
 }
-
+.fullButton {
+  display: inline-block;
+  padding: 12px 16px;
+  background-color: rgba(246, 141, 39, 1);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  border-radius: 10%;
+  transition: background-color 0.3s ease;
+  margin: auto;
+}
+.topinfoContainer {
+  position: relative;
+  margin: auto;
+}
 .dropdown {
   position: relative;
 }
-
+/* side navigation */
 .dropdown-menu {
   position: fixed;
   left: -250px;
@@ -231,10 +225,11 @@ a {
   width: 100%;
 }
 
-.exitMenu {
+.close {
   text-align: right;
   margin-right: 30px;
 }
+/* end side navigation */
 
 /* Call button slide */
 .banner-button-call-slide {
@@ -272,48 +267,18 @@ a {
   font-size: 14px;
   margin-left: -2px;
 }
+/* end call button slide */
 
-.fullContainer {
+.info-container {
   display: flex;
-  background-color: none;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 3% auto;
+  gap: 20px;
 }
 
-
-.fullButton {
-  font-family: "Noto Sans Cherokee" !important;
-  font-weight: 400 !important;
-  min-width: 110px;
-  padding: 14px;
-  background-color: rgba(246, 141, 39, 1);
-  border: none;
-  color: white;
-  border-radius: 5px;
-  font-size: 16px;
-  position: fixed;
-}
-
-.fullButton:hover {
-  background-color: #e67e22;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-20px);
-  }
-}
-
-/* Info Box */
-.info-box,
-.contact-info {
+.info-box {
   opacity: 0;
   transition: opacity O.5s ease, transform 0.5s ease;
   max-width: 80%;
@@ -342,8 +307,8 @@ a {
   justify-content: center;
   align-items: center;
   min-width: 140px;
-  width: 180px; /* Reduced width for smaller boxes */
-  max-width: 90%; /* Allow boxes to shrink in smaller viewports */
+  width: 180px;
+  max-width: 90%;
   background-color: #fdfdfde9;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
@@ -356,10 +321,8 @@ a {
   margin-right: auto;
 }
 
-
-
 .info-box-permis h3 {
-  font-size: 14px; /* Reduced font size for a cleaner look */
+  font-size: 14px;
   margin: 0;
   padding: 5px 0;
 }
@@ -370,43 +333,16 @@ a {
 .info-box-permis.visible {
   animation: fadeIn 2s forwards;
 }
-.contact-info {
-  width: 100%;
-  margin-top: 50px;
-  max-width: 60%;
-  background-color: rgba(246, 141, 39, 1);
-  justify-content: space-evenly;
-  font-weight: 100;
-}
 
-.loco {
-  max-width: 50%;
-  height: auto;
-}
-
-.lic {
-  padding: 0;
-  background-color: white;
-  font-weight: 600;
-  font-size: 14px;
-  text-align: center;
-  max-width: fit-content;
-  margin: 0 auto;
-  cursor: pointer;
-  border: none;
-}
-
-.lic:hover {
-  background-color: #e67e22;
-}
-
-.info-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 80%;
-  margin: 3% auto;
-  gap: 20px;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
 }
 
 .footer {
@@ -445,12 +381,10 @@ a {
   margin: 2px;
 }
 
-
 .footer a:hover {
   color: rgb(228, 226, 221);
 }
 
-/* Copyright Section */
 .copyright-footer {
   border-top: 1px solid #413d3d;
   color: white;
@@ -458,8 +392,28 @@ a {
   padding: 1px;
   text-align: center;
 }
-/* Optional: Smaller text size for smaller screens */
-@media (max-width: 500px) {
+
+@media (max-width: 650px) {
+  .logo-container {
+    max-width: 20%;
+    transition: max-width 0.5s;
+  }
+
+  .expanded {
+    width: 110px;
+  }
+
+  .splash-logo-container {
+    max-width: 300px;
+  }
+
+  .splash-logo {
+    max-width: 400px;
+    margin-top: -100px;
+  }
+  .topinfoContainer {
+    display: none;
+  }
   .footer {
     flex-direction: column; /* Stack items vertically on smaller screens */
     border-radius: 59% 41% 49% 51% / 42% 31% 69% 58%;
@@ -471,31 +425,20 @@ a {
   .footer article {
     min-height: auto; /* Remove fixed height for mobile */
   }
-
-
-@media (max-width: 750px) {
-  .dropdown {
-    display: block;
-  }
-  .fullContainer {
-    display: none;
-  }
-}
-
-@media (max-width: 650px) {
-  .expanded {
-    width: 110px;
-  }
 }
 
 @media (max-width: 370px) {
+  .logo-container {
+    max-width: 100%;
+    padding-right: 50px;
+  }
   .logo-container {
     width: 80%;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }
-  .fullContainer {
+  .topinfoContainer {
     display: none;
   }
 
@@ -508,38 +451,6 @@ a {
   .rightsidebuttons {
     padding-bottom: 15px;
   }
-}
-/* Media Queries */
-@media (max-width: 650px) {
-  .logo-container {
-    max-width: 20%;
-    transition: max-width 0.5s;
-  }
-
-  .expanded {
-    display: hidden;
-  }
-
-  .splash-logo-container {
-    max-width: 300px;
-  }
-
-  .splash-logo {
-    max-width: 400px;
-    margin-top: -100px;
-  }
-  .dropdown {
-    display: block;
-  }
-
-}
-
-@media (max-width: 370px) {
-  .logo-container {
-    max-width: 100%;
-    padding-right: 50px;
-  }
-
   .banner {
     flex-direction: column;
     align-items: center;
@@ -564,7 +475,6 @@ a {
   .expanded {
     width: 110px;
   }
-
 
   .splash-logo-container {
     max-width: 300px;
