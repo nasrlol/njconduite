@@ -56,7 +56,7 @@ a {
   flex-direction: column;
   align-items: center;
 }
-¨ .splash-logo {
+.splash-logo {
   animation: fadein 1.5s ease-in-out infinite;
 }
 
@@ -81,6 +81,8 @@ a {
   border: none;
   border-radius: 10%;
   transition: background-color 0.3s ease;
+  align-self: center;
+  margin: top 0;
 }
 
 .banner-button:hover,
@@ -135,11 +137,16 @@ a {
   font-size: 18px;
 }
 
-.topinfo {
-  display: flex;
+.topinfoContainer {
+
+  display: inline-flex;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px; /* Space between fullButton sections */
 }
+
+
 
 .call-button-container {
   display: flex;
@@ -179,10 +186,7 @@ a {
   transition: background-color 0.3s ease;
   margin: auto;
 }
-.topinfoContainer {
-  position: relative;
-  margin: auto;
-}
+
 .dropdown {
   position: relative;
 }
