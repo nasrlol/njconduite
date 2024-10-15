@@ -66,6 +66,12 @@ a {
   height: 0;
 }
 
+.logo {
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
 /* Buttons */
 .banner-button,
 .banner-button-call,
@@ -87,7 +93,8 @@ a {
 
 .banner-button:hover,
 .banner-button-call:hover,
-.banner-button-chat:hover {
+.banner-button-chat:hover,
+.fullButton:hover {
   background-color: #e67e22;
 }
 
@@ -116,12 +123,6 @@ a {
   align-items: center;
 }
 
-.logo {
-  width: 80%;
-  margin: 0 auto;
-  padding-left: 20px;
-}
-
 .rightsidebuttons {
   display: flex;
   align-items: center;
@@ -129,24 +130,31 @@ a {
   padding-left: 20px;
 }
 
-.infoBlock {
-  position: relative;
-  display: hidden;
-  color: #413d3d;
-  opacity: 0;
-  font-size: 18px;
-}
-
 .topinfoContainer {
-
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 20px; /* Space between fullButton sections */
+  gap: 20px;
+  text-align: center;
 }
-
-
+.topinfo {
+  text-align: center;
+}
+.fullButton {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  padding: 16px 16px;
+  background-color: rgba(246, 141, 39, 1);
+  color: #fff;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
 
 .call-button-container {
   display: flex;
@@ -155,7 +163,7 @@ a {
 }
 
 .menuButton {
-  display: inline-block;
+  display: flex;
   padding: 12px 16px;
   background-color: rgba(246, 141, 39, 1);
   color: #fff;
@@ -171,20 +179,6 @@ a {
 
 .menuButton:hover {
   background-color: #e67e22;
-}
-.fullButton {
-  display: inline-block;
-  padding: 12px 16px;
-  background-color: rgba(246, 141, 39, 1);
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-  text-align: center;
-  border: none;
-  border-radius: 10%;
-  transition: background-color 0.3s ease;
-  margin: auto;
 }
 
 .dropdown {
@@ -397,7 +391,7 @@ a {
   text-align: center;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   .logo-container {
     max-width: 20%;
     transition: max-width 0.5s;
