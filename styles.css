@@ -16,13 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-main {
-  background-color: rgb(36, 35, 35);
-  background-image: url(images/bc.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 
 a {
   text-decoration: none;
@@ -133,14 +127,18 @@ a {
 .topinfoContainer {
   display: flex;
   align-items: center;
-  gap: 20px;
-  text-align: center;
+  justify-content: center; /* Aligns children to the right */
+  padding: 10px; /* Optional padding to ensure some spacing */
 }
+
 .topinfo {
-  text-align: center;
-}
-.fullButton {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullButton {
+  display: flex; /* Keeps the button in the flow */
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   padding: 16px 16px;
@@ -154,6 +152,30 @@ a {
   border: none;
   border-radius: 50px;
   transition: background-color 0.3s ease;
+  margin-left: auto; /* Pushes the button to the right */
+}
+
+.info-box-extra {
+  position: relative;
+  top: 100px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-30px); /* Start off slightly lower */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+  max-width: 80% !important;
+  background-color: rgba(253, 253, 253); /* Use RGBA for transparency */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  color: black;
+  font-weight: 200;
+}
+
+/* Corrected hover and animation styles */
+.topinfo:hover .info-box-extra {
+  opacity: 1; /* Show the box on hover */
+  transform: translateY(10px); /* Slide down into view */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth both opacity and position */
 }
 
 .call-button-container {
