@@ -17,13 +17,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-main{
-  background: rgb(36,35,35);
-background: -moz-linear-gradient(180deg, rgba(36,35,35,0.9953168767507002) 0%, rgba(86,85,85,0.8) 20%, rgba(255,255,255,0.6) 40%, rgba(238,238,238,0.6) 60%, rgba(86,85,85,0.8) 80%, rgba(36,35,35,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(36,35,35,0.9953168767507002) 0%, rgba(86,85,85,0.8) 20%, rgba(255,255,255,0.6) 40%, rgba(238,238,238,0.6) 60%, rgba(86,85,85,0.8) 80%, rgba(36,35,35,1) 100%);
-background: linear-gradient(180deg, rgba(36,35,35,0.9953168767507002) 0%, rgba(86,85,85,0.8) 20%, rgba(255,255,255,0.6) 40%, rgba(238,238,238,0.6) 60%, rgba(86,85,85,0.8) 80%, rgba(36,35,35,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242323",endColorstr="#242323",GradientType=1);
-}
 
 a {
   text-decoration: none;
