@@ -63,10 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       };
 
-      splash.addEventListener("click", hideSplash);
-
-      // Automatically hide the splash screen after 1.3 seconds and start the animation
-      setTimeout(hideSplash, 1300);
     }
   });
 });

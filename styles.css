@@ -29,36 +29,8 @@ a {
   color: inherit;
 }
 
-/* Splash Screen */
-.splashscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(36, 35, 35);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
-}
 
-.splash-logo-container {
-  text-align: center;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.splash-logo {
-  animation: fadein 1.5s ease-in-out infinite;
-}
+
 
 .splashscreen-hidden {
   opacity: 0;
@@ -130,15 +102,18 @@ a {
   padding-left: 20px;
 }
 
-.topinfoContainer {
+.topinfo {
   display: flex;
   align-items: center;
   gap: 20px;
   text-align: center;
 }
-.topinfo {
-  text-align: center;
+
+.topinfo span{
+  display: hidden;
+  background: #413d3d;
 }
+
 .fullButton {
   display: flex;
   justify-content: center; /* Centers content horizontally */
@@ -155,6 +130,10 @@ a {
   border-radius: 50px;
   transition: background-color 0.3s ease;
 }
+
+
+
+
 
 .call-button-container {
   display: flex;
@@ -401,14 +380,9 @@ a {
     width: 110px;
   }
 
-  .splash-logo-container {
-    max-width: 300px;
-  }
 
-  .splash-logo {
-    max-width: 400px;
-    margin-top: -100px;
-  }
+
+
   .topinfoContainer {
     display: none;
   }
@@ -474,12 +448,4 @@ a {
     width: 110px;
   }
 
-  .splash-logo-container {
-    max-width: 300px;
-  }
-
-  .splash-logo {
-    max-width: 400px;
-    margin-top: -100px;
-  }
 }
