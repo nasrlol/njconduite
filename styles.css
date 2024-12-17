@@ -467,6 +467,10 @@ a {
 }
 
 @media (max-width: 850px) {
+	.topinfo {
+		display: none;
+	}
+
 	.logo-container {
 		max-width: 20%;
 		transition: all 0.5s;
