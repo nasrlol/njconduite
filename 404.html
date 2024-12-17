@@ -1,114 +1,52 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>404 Page Non Trouvée</title>
+		<style>
+			body {
+				font-family: "Arial", sans-serif;
+				text-align: center;
+				padding: 50px;
+				background-color: #f0f0f0;
+				color: #333;
+			}
 
-<head>
-    <title>404 Page Non Trouvée</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f0f0f0;
-            color: #333;
-        }
+			h1 {
+				font-size: 48px;
+				margin-bottom: 20px;
+				color: #ff6f61;
+				animation: shake 0.5s;
+				animation-iteration-count: infinite;
+			}
 
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #ff6f61;
-            animation: shake 0.5s;
-            animation-iteration-count: infinite;
-        }
+			p {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
 
-        p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
+			a {
+				color: #ff6f61;
+				text-decoration: none;
+				font-weight: bold;
+			}
 
-        a {
-            color: #ff6f61;
-            text-decoration: none;
-            font-weight: bold;
-        }
+			a:hover {
+				text-decoration: underline;
+			}
 
-        a:hover {
-            text-decoration: underline;
-        }
+			.error {
+				width: 200px;
+				height: auto;
+				animation: float 3s ease-in-out infinite;
+			}
+		</style>
+	</head>
 
-        .error {
-            width: 200px;
-            height: auto;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes shake {
-            0% {
-                transform: translate(1px, 1px) rotate(0deg);
-            }
-
-            10% {
-                transform: translate(-1px, -2px) rotate(-1deg);
-            }
-
-            20% {
-                transform: translate(-3px, 0px) rotate(1deg);
-            }
-
-            30% {
-                transform: translate(3px, 2px) rotate(0deg);
-            }
-
-            40% {
-                transform: translate(1px, -1px) rotate(1deg);
-            }
-
-            50% {
-                transform: translate(-1px, 2px) rotate(-1deg);
-            }
-
-            60% {
-                transform: translate(-3px, 1px) rotate(0deg);
-            }
-
-            70% {
-                transform: translate(3px, 1px) rotate(-1deg);
-            }
-
-            80% {
-                transform: translate(-1px, -1px) rotate(1deg);
-            }
-
-            90% {
-                transform: translate(1px, 2px) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(1px, -2px) rotate(-1deg);
-            }
-        }
-
-        @keyframes float {
-            0% {
-                transform: translatey(0px);
-            }
-
-            50% {
-                transform: translatey(-20px);
-            }
-
-            100% {
-                transform: translatey(0px);
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <img src="../images/404.png" alt="ERREUR" class="error">
-    <br>
-    <h1>404 Page Non Trouvée</h1>
-    <p>Oups ! La page que vous recherchez n'existe pas.</p>
-    <p>Veuillez vérifier l'URL ou retourner à la <a href="/index.html">page d'accueil</a>.</p>
-</body>
-
+	<body>
+		<img src="../images/404.png" alt="ERREUR" class="error" />
+		<br />
+		<h1>404 Page Non Trouvée</h1>
+		<p>Oups ! La page que vous recherchez n'existe pas.</p>
+		<p>Veuillez vérifier l'URL ou retourner à la <a href="/index.html">page d'accueil</a>.</p>
+	</body>
 </html>

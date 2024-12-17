@@ -1,155 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="NJ Conduite - Auto-école moderne et flexible à Berre-l'Étang" />
+		<meta name="keywords" content="auto école Berre-l'Étang, permis de conduire, conduite accompagnée, code de la route" />
+		<meta name="author" content="nsrddyn" />
+		<link rel="icon" href="/images/favicon.ico" />
+		<title>NJ CONDUITE</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NJ Conduite - Auto-école moderne et flexible à Berre-l'Étang" />
-  <meta name="keywords"
-    content="auto école Berre-l'Étang, permis de conduire, conduite accompagnée, code de la route" />
-  <meta name="author" content="nsrddyn" />
-  <link rel="icon" href="/images/favicon.ico" />
-  <title>NJ CONDUITE</title>
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" as="style" />
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL7QKZF7C"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-1QL7QKZF7C");
+		</script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QL7QKZF7C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-1QL7QKZF7C");
-  </script>
+		<script defer src="main.js"></script>
+	</head>
 
-  <script defer src="main.js"></script>
-</head>
+	<body>
+		<nav class="banner">
+			<a class="logo-container" href="index.html">
+				<img src="images/njconduitemini.png" alt="logo" class="logo" loading="lazy" />
+			</a>
 
-<body>
-  <header class="banner">
-    <div class="logo-container">
-      <a href="index.html">
-        <img src="images/njconduitemini.png" alt="NJ CONDUITE logo" class="logo" loading="lazy" />
-      </a>
-    </div>
+			<ul class="dropdown">
+				<button class="menuButton" aria-label="Menu button">
+					<img src="images/menu.svg" alt="Menu" />
+					<div class="dropdown-menu" id="dropdownMenu">
+						<li><a href="page/contact.html">CONTACT</a></li>
+						<li><a href="page/code.html">LE CODE</a></li>
+						<li><a href="page/permis.html">PERMIS</a></li>
+						<li><a href="page/financement.html">FINANCEMENT</a></li>
+						<li><a href="page/privacy.html">CONFIDENTIALITÉ</a></li>
+					</div>
+				</button>
+			</ul>
 
-    <nav class="rightsidebuttons">
-      <div class="topinfo">
-        <button class="fullButton" id="permisbutton">PERMIS</button>
-        <span class="permis">Lorem ipsum dolor sit amet.</span>
-        <button class="fullButton" id="codebutton">LE CODE</button>
-        <span class="code">Lorem ipsum dolor sit amet.</span>
-        <button class="fullButton" id="contactbutton">CONTACT</button>
-        <span class="contact">Lorem ipsum dolor sit amet.</span>
-      </div>
+			<a href="#">
+				<button class="banner-button" aria-label="Chat with us">
+					<img src="/images/chat.svg" alt="Parlez-nous" />
+				</button>
+			</a>
 
-      <div class="dropdown">
-        <button class="menuButton" aria-label="Menu button">
-          <img src="images/menu.svg" alt="Menu" />
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a href="page/contact.html">CONTACT</a>
-            <a href="page/code.html">LE CODE</a>
-            <a href="page/permis.html">PERMIS</a>
-            <a href="page/financement.html">FINANCEMENT</a>
-            <a href="page/privacy.html">CONFIDENTIALITÉ</a>
-          </div>
-        </button>
-      </div>
+			<div class="call-button-container">
+				<button class="banner-button" aria-label="Call us">
+					<img src="images/phone.svg" alt="Appelez-nous" />
+				</button>
+				<button class="banner-button-call-slide">
+					<a href="tel:0442854015">0442854015</a>
+				</button>
+			</div>
+		</nav>
 
-      <a href="#">
-        <button class="banner-button-chat" aria-label="Chat with us">
-          <img src="/images/chat.svg" alt="Parlez-nous" />
-        </button>
-      </a>
+		<main>
+			<section class="info-box">
+				<header>
+					<h2>Nos formations</h2>
+				</header>
+				<p>
+					NJ Conduite propose une formation complète incluant 48h de code, 30h de conduite avec simulateur, et la conduite supervisée
+					illimitée.
+				</p>
+			</section>
 
-      <div class="call-button-container">
-        <button class="banner-button-call" aria-label="Call us">
-          <img src="images/phone.svg" alt="Appelez-nous" />
-        </button>
-        <button class="banner-button-call-slide">
-          <a href="tel:0442854015">0442854015</a>
-        </button>
-      </div>
-    </nav>
-  </header>
+			<section>
+				<article class="info-box">
+					<h2>Cours en Ligne</h2>
+					<p>Accédez à nos cours de code en ligne à toute heure, où que vous soyez.</p>
+				</article>
+				<article class="info-box">
+					<h2>Sessions Présentielles</h2>
+					<p>Participez à des sessions en petit groupe avec un formateur qualifié.</p>
+				</article>
+				<article class="info-box">
+					<h2>Permis</h2>
+					<p>
+						En ligne, en présentiel ou les deux.
+						<a href="page/permis.html"><i>Visitez notre page permis</i></a> pour en savoir plus.
+					</p>
+				</article>
+			</section>
+		</main>
 
-  <main>
-    <section class="info-container">
-      <article class="info-box-permis">
-        <h3>Permis B</h3>
-      </article>
-      <article class="info-box-permis">
-        <h3>Conduite Accompagnée</h3>
-      </article>
-      <article class="info-box-permis">
-        <h3>Permis Moto (A, A1, A2)</h3>
-      </article>
-    </section>
-
-    <section class="info-box">
-      <header>
-        <h2>Nos formations</h2>
-      </header>
-      <p>
-        NJ Conduite propose une formation complète incluant 48h de code, 30h de conduite avec simulateur, et la conduite
-        supervisée illimitée.
-      </p>
-
-    </section>
-
-    <section>
-      <article class="info-box">
-        <h2>Cours en Ligne</h2>
-        <p>Accédez à nos cours de code en ligne à toute heure, où que vous soyez.</p>
-      </article>
-      <article class="info-box">
-        <h2>Sessions Présentielles</h2>
-        <p>Participez à des sessions en petit groupe avec un formateur qualifié.</p>
-      </article>
-      <article class="info-box">
-        <h2>Permis</h2>
-        <p>
-          En ligne, en présentiel ou les deux.
-          <a href="page/permis.html"><i>Visitez notre page permis</i></a> pour en savoir plus.
-        </p>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <section class="footer">
-      <article class="contact">
-        <h3>Contact</h3>
-        <a href="mailto:njconduite@gmail.com">
-          <p>njconduite@gmail.com</p>
-        </a>
-        <p>04 42 85 40 15</p>
-      </article>
-      <article class="location">
-        <h3>Location</h3>
-        <a href="https://maps.app.goo.gl/dfFSUVzosSf1zXka8" target="_blank" rel="noopener noreferrer">
-          <p>13130 Berre-L'Étang, 35 Av. de la libération</p>
-        </a>
-      </article>
-      <article class="opening-hours">
-        <h3>Horaires</h3>
-        <p>Lundi: fermé</p>
-        <p>Mardi - Vendredi: 14h-19h</p>
-        <p>Samedi: 10h-12h</p>
-        <p>Dimanche: fermé</p>
-      </article>
-    </section>
-    <section class="copyright-footer">
-      <p>
-        © 2024 NJ Conduite - Auto-école Berre-l'Étang |
-        <a href="https://github.com/nasrlol" target="_blank" rel="noopener noreferrer">nsrddyn</a> |
-        <a href="/page/privacy.html">Politique de confidentialité</a>
-      </p>
-    </section>
-  </footer>
-</body>
-
+		<footer>
+			<section class="footer">
+				<article class="contact">
+					<h3>Contact</h3>
+					<a href="mailto:njconduite@gmail.com">
+						<p>njconduite@gmail.com</p>
+					</a>
+					<p>04 42 85 40 15</p>
+				</article>
+				<article class="location">
+					<h3>Location</h3>
+					<a href="https://maps.app.goo.gl/dfFSUVzosSf1zXka8" target="_blank" rel="noopener noreferrer">
+						<p>13130 Berre-L'Étang, 35 Av. de la libération</p>
+					</a>
+				</article>
+				<article class="opening-hours">
+					<h3>Horaires</h3>
+					<p>Lundi: fermé</p>
+					<p>Mardi - Vendredi: 14h-19h</p>
+					<p>Samedi: 10h-12h</p>
+					<p>Dimanche: fermé</p>
+				</article>
+			</section>
+			<section class="copyright-footer">
+				<p>
+					© 2024 NJ Conduite - Auto-école Berre-l'Étang |
+					<a href="https://github.com/nasrlol" target="_blank" rel="noopener noreferrer">nsrddyn</a> |
+					<a href="/page/privacy.html">Politique de confidentialité</a>
+				</p>
+			</section>
+		</footer>
+	</body>
 </html>
