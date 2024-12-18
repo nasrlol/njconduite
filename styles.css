@@ -1,6 +1,3 @@
-/* General Reset */
-@import url("https://fonts.googleapis.com/css?family=Noto%20Sans%20Cherokee:700|Noto%20Sans%20Cherokee:400");
-
 html,
 body {
 	margin: 0;
@@ -12,6 +9,12 @@ body {
 	font-family: "Noto Sans", sans-serif;
 	color: rgb(255, 255, 255);
 	overflow-x: hidden;
+	font-size: large;
+}
+
+@font-face {
+	font-family: "Noto Sans", sans-serif;
+	src: url(fonts/notosanscherokee.ttf);
 }
 
 a {
@@ -19,52 +22,53 @@ a {
 	color: inherit;
 }
 
-.logo {
-	width: 80%;
-	margin: 0 auto;
-	padding-left: 20px;
+li {
+	list-style-type: none;
 }
 
-/* General Button Styles */
 .banner-button,
-.banner-button-call,
-.banner-button-chat {
+.menu-button,
+.call-button {
 	display: inline-block;
 	padding: 12px 16px;
 	background-color: rgba(246, 141, 39, 1); /* Oranje tint */
 	color: #fff;
 	cursor: pointer;
-
-	font-weight: 600;
-	font-size: 14px;
 	text-align: center;
-
 	border: none;
 	border-radius: 8px;
-
 	transition: background-color 0.3s ease, transform 0.2s ease;
-	align-self: center;
-
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover Effects */
-.banner-button:hover {
+.banner-button:hover,
+.menu-button:hover {
 	background-color: #e67e22; /* Donkerdere oranje tint */
 	transform: translateY(-3px); /* Licht zwevende animatie */
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Banner Styles */
+.call-button:hover {
+	background-color: #e67e22; /* Donkerdere oranje tint */
+	transform: translateY(-3px); /* Licht zwevende animatie */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.call-button:hover .call-slide {
+	background-color: #e67e22; /* Donkerdere oranje tint */
+	transform: translateY(-3px); /* Licht zwevende animatie */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 .banner {
-	background-color: rgb(43, 38, 38); /* Donkere achtergrond */
+	background-color: rgb(36, 35, 35); /* Donkere achtergrond */
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	gap: 10px;
 	height: 110px;
-
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+	padding: 15px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
 	position: sticky;
 	top: 0;
 	z-index: 5;
@@ -75,63 +79,43 @@ a {
 	justify-self: flex-start;
 	margin-left: 0;
 	margin-right: auto;
+	padding: 10px;
 }
 
-.call-button-container {
+.call-container {
 	display: flex;
+}
+
+.dropdown {
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	position: relative;
 }
 
-.menuButton {
-	padding: 14px 16px;
-	background-color: rgba(246, 141, 39, 1);
-	cursor: pointer;
-	border: none;
-	border-radius: 10%;
-	transition: background-color 0.3s ease;
-}
-
-.menuButton:hover {
-	background-color: #e67e22;
-}
-
-.dropdown {
-	position: relative;
-}
-
-/* side navigation */
 .dropdown-menu {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: space-around;
 	position: fixed;
 	list-style: none;
-	left: -250px;
-
 	background-color: #333333;
-	overflow: hidden;
 	opacity: 0;
-
 	padding: 20px;
 	width: fit-content;
-	height: auto;
-
+	height: 500px;
 	z-index: 10;
-	border-radius: 10px;
-	line-height: 1.5;
-
+	border-radius: 30px;
+	line-height: 1.4;
 	font-weight: 600;
 	font-size: 20px;
-
-	transition: all 0.5s ease;
+	transition: all 0.2s ease;
 }
 
 .dropdown-menu.open {
-	left: 0;
-	opacity: 0.9;
-	width: 20%;
+	opacity: 1;
+	width: fit-content;
 }
 
 .dropdown-menu a {
@@ -141,108 +125,56 @@ a {
 	border-radius: 10px;
 }
 
-.dropdown-menu a:hover {
-	color: #ff6f00;
-	background-color: white;
-	width: auto;
-	transition: all 0.2s ease-in-out;
-}
-
-/* end side navigation */
-
-/* Call Button Slide */
-.banner-button-call-slide {
+.call-slide,
+.call-slide a {
 	display: inline-block;
 	padding: 10px 16px;
-
 	background-color: #fff;
 	color: rgba(246, 141, 39, 1);
 	cursor: pointer;
-
-	font-weight: 800;
-	text-align: center;
-
-	border-radius: 0 5px 5px 0;
+	border-radius: 0 10px 10px 0;
 	border: 1px solid #fff;
-	border-left: none;
-
 	opacity: 0;
 	width: 0;
 	height: 50px;
-
 	overflow: hidden;
-
-	transition: opacity 0.5s ease, width 0.7s ease;
+	transition: opacity 0.5s ease, width 0.5s ease;
 }
 
-.banner-button-call-slide a {
-	visibility: hidden;
-	text-decoration: none;
-
-	color: rgba(246, 141, 39, 1);
-	font-weight: 600;
-	font-size: larger;
-	transition: color 0.3s ease-in-out;
-}
-
-/* State when the button is expanded */
-.banner-button-call-slide.expanded {
+.call-slide.expanded {
 	opacity: 1;
 	width: 150px;
 	font-size: 14px;
-	transition: opacity 0.5s ease-in-out, width 0.7s ease-in-out;
+	transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 
-/* Hover effects for the container */
-.call-button-container:hover .banner-button-call-slide {
-	opacity: 1;
-	width: 150px;
+.textbox {
+	margin: 30px 0px 30px 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
 }
-
-.call-button-container:hover .banner-button-call-slide a {
-	visibility: visible;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-	.banner-button-call-slide {
-		width: 120px;
-	}
-}
-/* end call button slide */
-
-.info-box {
+.textbox article {
 	opacity: 0;
 	transition: all 0.5 ease-in-out;
-	max-width: 80%;
 	background-color: #fdfdfde9;
-	border-radius: 10px;
+	width: 400px;
+	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
-	padding: 15px;
-	/* Reduced padding for a cleaner look */
+	padding: 25px;
 	text-align: center;
 	color: black;
 	font-weight: 200;
 	margin: 20px auto;
 }
 
-.info-box:hover,
-.info-box:hover {
+.textbox article:hover {
 	box-shadow: 0 10px 20px rgba(252, 250, 250, 0.665), 0 6px 6px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s;
 }
 
-.info-box-permis h3 {
-	font-size: 14px;
-	margin: 0;
-	padding: 5px 0;
-}
-
-.info-box.visible {
-	animation: fadeIn 2s forwards;
-}
-
-.info-box-permis.visible {
+.textbox article.visible {
 	animation: fadeIn 2s forwards;
 }
 
@@ -259,45 +191,27 @@ a {
 }
 
 .footer {
-	background-color: rgb(36, 35, 35);
+	background-color: rgb(36, 35, 35); /* Donkere achtergrond */
 	color: #fff;
-	width: 100%;
-	padding: 20px -5%;
+	padding: 30px;
 	font-size: 15px;
-	text-align: center;
 	font-weight: 300;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: baseline;
-	/* Ensures all articles have equal height */
+	justify-content: space-around;
+	align-items: flex-start;
 	gap: 10px;
-	margin-bottom: 10%;
 	border-top: 1px solid #413d3d;
 }
 
 .footer article {
-	flex: 1;
-	/* Ensures all sections grow equally */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	/* Centers content vertically */
-	align-items: center;
-	min-height: 150px;
-	/* Adjust the height as needed */
+	text-align: center;
+	padding: 10px;
 }
 
-.footer h3 {
-	align-items: start;
-	top: 0;
+.footer p {
+	margin: 0px;
 }
-
-.footer article p,
-.footer article a {
-	margin: 2px;
-}
-
 .footer a:hover {
 	color: rgb(228, 226, 221);
 }

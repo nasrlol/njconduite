@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-	const callButtonSlide = document.querySelector(".banner-button-call-slide");
-	const callButtonContainer = document.querySelector(
-		".call-button-container"
-	);
-	const callButton = document.querySelector(".banner-button-call");
-
+	const callButtonSlide = document.getElementById("call-slide");
+	const callButtonContainer = document.getElementById("call-container");
+	const callButton = document.getElementById("call-button");
 	if (callButton) {
 		callButton.addEventListener("click", function (event) {
 			event.stopPropagation(); // Prevent event from bubbling up
@@ -22,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
-	const menuButton = document.querySelector(".menuButton");
+	const menuButton = document.querySelector(".menu-button");
 	const sideNav = document.getElementById("dropdownMenu");
 
 	if (menuButton && sideNav) {
@@ -40,18 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	const infoBoxes = document.querySelectorAll(".info-box");
+	const infoBoxes = document.querySelectorAll("article");
 	infoBoxes.forEach((infoBox) => {
 		observer.observe(infoBox);
 	});
 
-	window.addEventListener("load", function () {
-		if (True) {
-			const infoBoxesPermis =
-				document.querySelectorAll(".info-box-permis");
-			infoBoxesPermis.forEach((BoxesPermis) => {
-				observer.observe(BoxesPermis);
-			});
-		}
-	});
 });
