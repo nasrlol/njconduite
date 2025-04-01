@@ -109,13 +109,13 @@ footer {
 	gap: 30px;
 }
 
-footer article {
-	color: #000;
+footer article > * {
+	color: #000000;
 	max-width: 250px;
 }
 
 footer a {
-	color: #000000;
+	color: #040404;
 	text-decoration: none;
 	transition: color 0.3s;
 }
@@ -132,6 +132,13 @@ footer a:hover {
 	font-size: 0.9rem;
 }
 
+.copyright-footer > p > a {
+	color: rgb(207, 207, 207);
+}
+
+.copyright-footer > p > a:hover {
+	color: rgb(100, 85, 85);
+}
 /* Animations */
 @keyframes fadeIn {
 	from {
