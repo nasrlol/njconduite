@@ -63,6 +63,7 @@ main {
 	text-align: center;
 	padding: 50px 20px;
 	flex-grow: 1;
+	min-height: 100vh;
 }
 
 a {
